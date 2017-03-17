@@ -10,8 +10,10 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    // MARK: 懒加载
     lazy var composeButton: UIButton = UIButton(imageName: "tabbar_compose_button", backgroundImageName: "tabbar_compose_icon_add")
     
+    // MARK: 系统方法
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,7 @@ class MainTabBarController: UITabBarController {
 }
 
 
+// MARK: 自定义方法
 private extension MainTabBarController {
     
     func setupComposeButton() {
@@ -30,6 +33,17 @@ private extension MainTabBarController {
         tabBar.addSubview(composeButton)
         
         composeButton.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height / 2.0)
+        
+        composeButton.addTarget(self, action: #selector(MainTabBarController.composeButtonClick), for: .touchUpInside)
+        
+    }
+}
+
+private extension MainTabBarController {
+    
+    @objc func composeButtonClick() {
+        
+        print("点击composeButtonClick")
         
     }
 }
