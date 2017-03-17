@@ -15,10 +15,14 @@ class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        isLogin ? self.loadView() : setupVisitorView()
     
     }
 
+    override func loadView() {
+        
+        isLogin ? super.loadView() : setupVisitorView()
+
+    }
     
 }
 
