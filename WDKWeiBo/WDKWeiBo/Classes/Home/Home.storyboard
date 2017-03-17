@@ -11,7 +11,7 @@
         <!--首页-->
         <scene sceneID="KjL-jn-QYw">
             <objects>
-                <tableViewController id="sN8-xi-Pvh" sceneMemberID="viewController">
+                <tableViewController id="sN8-xi-Pvh" customClass="HomeViewController" customModule="WDKWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RcN-Ey-Ubx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

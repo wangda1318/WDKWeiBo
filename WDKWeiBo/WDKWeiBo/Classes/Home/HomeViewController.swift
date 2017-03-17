@@ -8,14 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white
+
+//        view.backgroundColor = UIColor.white
         
-        // Do any additional setup after loading the view.
     }
 
     

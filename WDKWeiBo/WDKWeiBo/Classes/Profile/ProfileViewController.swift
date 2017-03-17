@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.orange
+//        view.backgroundColor = UIColor.orange
 
         // Do any additional setup after loading the view.
     }

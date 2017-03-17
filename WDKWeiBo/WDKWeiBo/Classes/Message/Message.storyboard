@@ -11,7 +11,7 @@
         <!--消息-->
         <scene sceneID="CV9-cr-1BQ">
             <objects>
-                <tableViewController id="E9S-jY-BaE" sceneMemberID="viewController">
+                <tableViewController id="E9S-jY-BaE" customClass="MessageViewController" customModule="WDKWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="A5R-hg-e5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
