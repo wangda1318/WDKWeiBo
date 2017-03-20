@@ -13,8 +13,7 @@ class HomeViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-//        view.backgroundColor = UIColor.white
+        visitorView.rotate()
         
     }
 
