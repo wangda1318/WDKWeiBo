@@ -31,7 +31,7 @@ private extension BaseTableViewController {
     func setupVisitorView() {
         
         let visitorView = VisitorView.VisitorView()
-        
+        visitorView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
         view = visitorView
         
     }
