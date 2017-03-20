@@ -15,7 +15,21 @@ class HomeViewController: BaseTableViewController {
 
         visitorView.rotate()
         
+        if !isLogin {
+            return
+        }
+        setupNavigationBar()
+        
     }
 
+}
+
+private extension BaseTableViewController {
     
+    func setupNavigationBar() {
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop")
+        
+    }
 }

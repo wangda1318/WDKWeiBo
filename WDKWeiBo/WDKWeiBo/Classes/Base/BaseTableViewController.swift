@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController {
 
-    var isLogin = false
+    var isLogin = true 
     public lazy var visitorView = VisitorView.visitorView()
     
     override func viewDidLoad() {

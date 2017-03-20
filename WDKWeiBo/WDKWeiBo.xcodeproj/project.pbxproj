@@ -22,6 +22,7 @@
 		54178E6C1E7BD6DD003C964E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54178E6B1E7BD6DD003C964E /* BaseTableViewController.swift */; };
 		54178E6E1E7BD8B5003C964E /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54178E6D1E7BD8B5003C964E /* VisitorView.swift */; };
 		54178E701E7BD8F6003C964E /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54178E6F1E7BD8F6003C964E /* VisitorView.xib */; };
+		5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */; };
 		54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */; };
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		54178E6B1E7BD6DD003C964E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		54178E6D1E7BD8B5003C964E /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		54178E6F1E7BD8F6003C964E /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		54C34B281E7AC4480085DF09 /* WDKWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDKWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C34B301E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				54178E461E7BB63C003C964E /* UIButton+Extension.swift */,
+				5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				54178E301E7B7300003C964E /* ProfileViewController.swift in Sources */,
 				54178E281E7B72AB003C964E /* MainTabBarController.swift in Sources */,
+				5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */,
 				54178E6C1E7BD6DD003C964E /* BaseTableViewController.swift in Sources */,
 				54178E2C1E7B72E7003C964E /* DiscoverViewController.swift in Sources */,
 				54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */,
