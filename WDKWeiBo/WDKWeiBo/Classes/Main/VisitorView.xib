@@ -83,9 +83,11 @@
                 <constraint firstItem="GZL-dM-vxC" firstAttribute="leading" secondItem="K7D-2d-8VR" secondAttribute="leading" id="v6M-qC-kux"/>
             </constraints>
             <connections>
-                <outlet property="iconImageView" destination="mb9-B1-7ud" id="xUR-IL-c9R"/>
-                <outlet property="rotationImageView" destination="P7h-Qj-2Rd" id="IT0-8B-aqP"/>
-                <outlet property="tipLabel" destination="K7D-2d-8VR" id="wgF-Vm-lfz"/>
+                <outlet property="iconImageView" destination="mb9-B1-7ud" id="R31-kU-Sjz"/>
+                <outlet property="loginButton" destination="Stp-cH-ZjL" id="dQf-Z8-iR1"/>
+                <outlet property="registerButton" destination="GZL-dM-vxC" id="aub-cf-2oT"/>
+                <outlet property="rotationImageView" destination="P7h-Qj-2Rd" id="UJ8-yd-yhz"/>
+                <outlet property="tipLabel" destination="K7D-2d-8VR" id="T1y-Cj-jaY"/>
             </connections>
             <point key="canvasLocation" x="49.5" y="53.5"/>
         </view>

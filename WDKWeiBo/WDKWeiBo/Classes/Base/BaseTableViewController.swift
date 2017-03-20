@@ -16,7 +16,9 @@ class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(BaseTableViewController.registerClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(BaseTableViewController.loginClick))
+        
     }
 
     override func loadView() {
@@ -33,6 +35,25 @@ private extension BaseTableViewController {
         
         visitorView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
         view = visitorView
+        
+        visitorView.registerButton.addTarget(self, action: #selector(BaseTableViewController.registerClick), for: .touchUpInside)
+        visitorView.loginButton.addTarget(self, action: #selector(BaseTableViewController.loginClick), for: .touchUpInside)
+
+    }
+    
+}
+
+private extension BaseTableViewController {
+    
+    @objc func registerClick() {
+        
+        print("注册")
+        
+    }
+    
+    @objc func loginClick() {
+        
+        print("登录")
         
     }
 }

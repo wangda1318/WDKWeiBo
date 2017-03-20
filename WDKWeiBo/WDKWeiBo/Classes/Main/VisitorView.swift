@@ -20,6 +20,8 @@ class VisitorView: UIView {
     @IBOutlet weak var rotationImageView: UIImageView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
 
     // MARK: 方法
     func setupVisitorView(iconName: String, tip: String) {
