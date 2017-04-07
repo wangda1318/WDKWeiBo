@@ -44,6 +44,12 @@ private extension HomeViewController {
         
         titleButton.isSelected = !titleButton.isSelected
         
+        let popoverVC = PopoverViewController()
+        // 设置为custom时，弹出视图
+        popoverVC.modalPresentationStyle = .custom
+        
+        present(popoverVC, animated: true, completion: nil)
+        
         print("title")
         
     }
