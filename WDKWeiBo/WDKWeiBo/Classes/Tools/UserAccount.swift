@@ -18,15 +18,12 @@ class UserAccount: NSObject {
     }
     var uid: String?
     var expires_date: Date?
+    var screen_name: String?
+    var avatar_large: String?
     
     init(dict: [String: Any]) {
         super.init()
         
-//        access_token = dict["access_token"] as? String
-//        expires_in = dict["expires_in"] as! TimeInterval
-//        uid = dict["uid"] as? String
-//        date = Date(timeIntervalSinceNow: expires_in)
-
         self.setValuesForKeys(dict)
         
     }
@@ -37,7 +34,7 @@ class UserAccount: NSObject {
     
     override var description: String {
         
-        return dictionaryWithValues(forKeys: ["access_token", "expires_date", "uid"]).description
+        return dictionaryWithValues(forKeys: ["access_token", "expires_date", "uid", "screen_name", "avatar_large"]).description
         
     }
 }

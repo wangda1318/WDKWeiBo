@@ -28,6 +28,8 @@ class NetworkTools: AFHTTPSessionManager {
     
 }
 
+
+// MARK: - 网络请求
 extension NetworkTools {
     
     func request(method: MethodType ,URLString: String, parameters: [String: Any]?, finished: @escaping(_ data: Any?, _ error: Error?) -> ()) {
@@ -55,17 +57,30 @@ extension NetworkTools {
     }
 }
 
+
+// MARK: - 获取accessToken
 extension NetworkTools {
     
     func accessToken(code: String, finished: @escaping (_ result: [String : Any]?, _ error: Error?) -> ()) {
         
         let para = ["client_id": app_key, "client_secret": app_secret, "grant_type": "authorization_code", "code": code, "redirect_uri": redirect_uri]
         
-
+        
         request(method: .POST, URLString: "https://api.weibo.com/oauth2/access_token", parameters: para) { (data, error) in
             
-            print("error = \(error)")
-            print("data = \(data)")
+            finished(data as? [String : Any], error)
+        }
+    }
+}
+
+extension NetworkTools {
+    
+    func userInfo(accessToken: String, uid: String, finished: @escaping (_ result: [String: Any]?, _ error: Error?) -> ()) {
+        
+        let para = ["access_token": accessToken, "uid": uid]
+        
+        request(method: .GET, URLString: "https://api.weibo.com/2/users/show.json", parameters: para) { (data, error) in
+            finished(data as? [String : Any], error)
             
         }
     }

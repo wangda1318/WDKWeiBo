@@ -100,18 +100,48 @@ private extension OAuthViewController {
     
     func getAccessToken(code: String) {
         
-        let para = ["client_id": app_key, "client_secret": app_secret, "grant_type": "authorization_code", "code": code, "redirect_uri": redirect_uri]
-        NetworkTools.sharedInstance.request(method: .POST, URLString: "https://api.weibo.com/oauth2/access_token", parameters: para) { (data, error) in
+        NetworkTools.sharedInstance.accessToken(code: code) { (data, error) in
             
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
-                        
-            let account = UserAccount(dict: data as! [String : Any])
+            
+            let account = UserAccount(dict: data!)
+            print(account.description)
+
+            self.getUserInfo(account: account)
+        }
+        
+    }
+}
+
+private extension OAuthViewController {
+    
+    func getUserInfo(account: UserAccount) {
+        
+        guard let accessToken = account.access_token else {
+            return
+        }
+        
+        guard let uid = account.uid else {
+            return
+        }
+
+        NetworkTools.sharedInstance.userInfo(accessToken: accessToken, uid: uid) { (data, error) in
+            
+            if error != nil {
+                return
+            }
+            
+            guard let result = data else {
+                return
+            }
+            account.screen_name = result["screen_name"] as? String
+            account.avatar_large = result["avatar_large"] as? String
+            
             print(account.description)
             
         }
-    
     }
 }
