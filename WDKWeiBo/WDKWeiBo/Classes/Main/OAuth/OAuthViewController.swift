@@ -142,6 +142,11 @@ private extension OAuthViewController {
             
             print(account.description)
             
+            var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            filePath = (filePath as NSString).appendingPathComponent("account")
+            print(filePath)
+            
+            NSKeyedArchiver.archiveRootObject(account, toFile: filePath)
         }
     }
 }
