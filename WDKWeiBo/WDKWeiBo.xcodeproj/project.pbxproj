@@ -27,6 +27,7 @@
 		544B7BA51E9726D6000BE472 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544B7BA31E9726D6000BE472 /* PopoverViewController.swift */; };
 		544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544B7BA41E9726D6000BE472 /* PopoverViewController.xib */; };
 		545933B51EA6F2760065B2B3 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */; };
+		545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B61EA6FAB20065B2B3 /* NetworkTools.swift */; };
 		54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */; };
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		544B7BA31E9726D6000BE472 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		544B7BA41E9726D6000BE472 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		545933B61EA6FAB20065B2B3 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		54C34B281E7AC4480085DF09 /* WDKWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDKWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C34B301E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				54178E451E7BB62C003C964E /* Category */,
+				545933B61EA6FAB20065B2B3 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */,
 				54178E301E7B7300003C964E /* ProfileViewController.swift in Sources */,
 				54178E281E7B72AB003C964E /* MainTabBarController.swift in Sources */,
 				5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */,
