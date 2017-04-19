@@ -35,6 +35,7 @@
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
 		54C34B361E7AC4480085DF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B341E7AC4480085DF09 /* LaunchScreen.storyboard */; };
+		54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */; };
 		54FA83051EA78CE800E09791 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA83041EA78CE800E09791 /* UserAccount.swift */; };
 		E79206376F3BF79A40A9453F /* Pods_WDKWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		54C34B321E7AC4480085DF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54C34B351E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54C34B371E7AC4480085DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		54FA83041EA78CE800E09791 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		723D33C8EA27863DD1A36131 /* Pods-WDKWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDKWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				54178E451E7BB62C003C964E /* Category */,
 				545933B61EA6FAB20065B2B3 /* NetworkTools.swift */,
 				54FA83041EA78CE800E09791 /* UserAccount.swift */,
+				54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */,
 				545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */,
 				545933BE1EA764C90065B2B3 /* AppConfig.swift in Sources */,
 				54178E301E7B7300003C964E /* ProfileViewController.swift in Sources */,

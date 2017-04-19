@@ -10,7 +10,8 @@ import UIKit
 
 class BaseTableViewController: UITableViewController {
 
-    var isLogin = false
+    var isLogin = UserAccountViewModel.shareInstance.isLogin
+    
     public lazy var visitorView = VisitorView.visitorView()
     
     override func viewDidLoad() {
@@ -22,25 +23,6 @@ class BaseTableViewController: UITableViewController {
     }
 
     override func loadView() {
-        
-        var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        filePath = (filePath as NSString).appendingPathComponent("account")
-
-        let account = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? UserAccount
-        print(account?.description)
-        
-        if account == nil{
-            isLogin = false
-        }
-        
-        if account!.expires_date?.compare(Date()) == ComparisonResult.orderedAscending {
-            
-            isLogin = false
-        }
-        
-        if account!.access_token != nil {
-            isLogin = true
-        }
         
         isLogin ? super.loadView() : setupVisitorView()
 
