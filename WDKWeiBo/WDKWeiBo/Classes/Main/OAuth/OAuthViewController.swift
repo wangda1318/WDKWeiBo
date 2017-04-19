@@ -107,8 +107,9 @@ private extension OAuthViewController {
                 print(error)
                 return
             }
-            
-            print(data as! [String : Any])
+                        
+            let account = UserAccount(dict: data as! [String : Any])
+            print(account.description)
             
         }
     
