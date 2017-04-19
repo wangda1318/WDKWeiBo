@@ -37,7 +37,7 @@ class VisitorView: UIView {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         
         animation.fromValue = 0
-        animation.toValue = M_PI * 2
+        animation.toValue = Double.pi * 2
         animation.duration = 6
         animation.repeatCount = MAXFLOAT
         animation.isRemovedOnCompletion = false
