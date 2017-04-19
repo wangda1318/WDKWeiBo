@@ -11,21 +11,33 @@ import UIKit
 class UserAccount: NSObject {
 
     var access_token: String?
-    var expires_in: TimeInterval = 0.0
+    var expires_in: TimeInterval = 0.0 {
+        didSet {
+            expires_date = Date(timeIntervalSinceNow: expires_in)
+        }
+    }
     var uid: String?
+    var expires_date: Date?
     
     init(dict: [String: Any]) {
         super.init()
         
-        access_token = dict["access_token"] as? String
-        expires_in = dict["expires_in"] as! TimeInterval
-        uid = dict["uid"] as? String
+//        access_token = dict["access_token"] as? String
+//        expires_in = dict["expires_in"] as! TimeInterval
+//        uid = dict["uid"] as? String
+//        date = Date(timeIntervalSinceNow: expires_in)
+
+        self.setValuesForKeys(dict)
+        
+    }
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
     
     override var description: String {
         
-        return "access_token : \(access_token), expires_in : \(expires_in), uid : \(uid)"
+        return dictionaryWithValues(forKeys: ["access_token", "expires_date", "uid"]).description
         
     }
 }
