@@ -55,5 +55,11 @@ private extension BaseTableViewController {
         
         print("登录")
         
+        let oAuthVC = OAuthViewController()
+        
+        let oAuthNavigationVC = UINavigationController(rootViewController: oAuthVC)
+        
+        present(oAuthNavigationVC, animated: true, completion: nil)
+        
     }
 }

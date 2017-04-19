@@ -28,6 +28,8 @@
 		544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544B7BA41E9726D6000BE472 /* PopoverViewController.xib */; };
 		545933B51EA6F2760065B2B3 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */; };
 		545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B61EA6FAB20065B2B3 /* NetworkTools.swift */; };
+		545933BB1EA75EBC0065B2B3 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B91EA75EBC0065B2B3 /* OAuthViewController.swift */; };
+		545933BC1EA75EBC0065B2B3 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545933BA1EA75EBC0065B2B3 /* OAuthViewController.xib */; };
 		54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */; };
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		544B7BA41E9726D6000BE472 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		545933B61EA6FAB20065B2B3 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		545933B91EA75EBC0065B2B3 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		545933BA1EA75EBC0065B2B3 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		54C34B281E7AC4480085DF09 /* WDKWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDKWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C34B301E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		5406CF321E7AD47D00788B62 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				545933B81EA75EAC0065B2B3 /* OAuth */,
 				54178E271E7B72AB003C964E /* MainTabBarController.swift */,
 				54178E6D1E7BD8B5003C964E /* VisitorView.swift */,
 				54178E6F1E7BD8F6003C964E /* VisitorView.xib */,
@@ -194,6 +199,15 @@
 				545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */,
 			);
 			path = UIPopover;
+			sourceTree = "<group>";
+		};
+		545933B81EA75EAC0065B2B3 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				545933B91EA75EBC0065B2B3 /* OAuthViewController.swift */,
+				545933BA1EA75EBC0065B2B3 /* OAuthViewController.xib */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		54C34B1F1E7AC4480085DF09 = {
@@ -303,6 +317,7 @@
 				54178E701E7BD8F6003C964E /* VisitorView.xib in Resources */,
 				54178E351E7B8D13003C964E /* Home.storyboard in Resources */,
 				54178E3E1E7B92BB003C964E /* Profile.storyboard in Resources */,
+				545933BC1EA75EBC0065B2B3 /* OAuthViewController.xib in Resources */,
 				54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */,
 				54178E331E7B7E88003C964E /* MainVCSettings.json in Resources */,
 				544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */,
@@ -372,6 +387,7 @@
 				54178E301E7B7300003C964E /* ProfileViewController.swift in Sources */,
 				54178E281E7B72AB003C964E /* MainTabBarController.swift in Sources */,
 				5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */,
+				545933BB1EA75EBC0065B2B3 /* OAuthViewController.swift in Sources */,
 				545933B51EA6F2760065B2B3 /* CustomPresentationController.swift in Sources */,
 				5425C2251E7FA8B200759428 /* CustomTitleButton.swift in Sources */,
 				544B7BA51E9726D6000BE472 /* PopoverViewController.swift in Sources */,
@@ -504,12 +520,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 923KR76TZ3;
 				INFOPLIST_FILE = WDKWeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wdk.WDKWeiBo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yskj.WB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -521,12 +539,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 923KR76TZ3;
 				INFOPLIST_FILE = WDKWeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wdk.WDKWeiBo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yskj.WB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
