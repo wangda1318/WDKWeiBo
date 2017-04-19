@@ -21,6 +21,7 @@ class NetworkTools: AFHTTPSessionManager {
     
         let tools = NetworkTools()
         tools.responseSerializer.acceptableContentTypes?.insert("text/html")
+        tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
         return tools
         
     }()
@@ -51,5 +52,21 @@ extension NetworkTools {
             break
         }
         
+    }
+}
+
+extension NetworkTools {
+    
+    func accessToken(code: String, finished: @escaping (_ result: [String : Any]?, _ error: Error?) -> ()) {
+        
+        let para = ["client_id": app_key, "client_secret": app_secret, "grant_type": "authorization_code", "code": code, "redirect_uri": redirect_uri]
+        
+
+        request(method: .POST, URLString: "https://api.weibo.com/oauth2/access_token", parameters: para) { (data, error) in
+            
+            print("error = \(error)")
+            print("data = \(data)")
+            
+        }
     }
 }
