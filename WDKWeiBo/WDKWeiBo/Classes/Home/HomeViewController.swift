@@ -47,10 +47,20 @@ private extension HomeViewController {
         let popoverVC = PopoverViewController()
         // 设置为custom时，弹出视图不会隐藏下面界面
         popoverVC.modalPresentationStyle = .custom
+        popoverVC.transitioningDelegate = self
         
         present(popoverVC, animated: true, completion: nil)
         
         print("title")
+        
+    }
+}
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
         
     }
 }
