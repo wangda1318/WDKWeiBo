@@ -31,6 +31,8 @@
 		545933BB1EA75EBC0065B2B3 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B91EA75EBC0065B2B3 /* OAuthViewController.swift */; };
 		545933BC1EA75EBC0065B2B3 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545933BA1EA75EBC0065B2B3 /* OAuthViewController.xib */; };
 		545933BE1EA764C90065B2B3 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933BD1EA764C90065B2B3 /* AppConfig.swift */; };
+		5499CA8E1EA84518003A9D24 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499CA8C1EA84518003A9D24 /* WelcomeViewController.swift */; };
+		5499CA8F1EA84518003A9D24 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5499CA8D1EA84518003A9D24 /* WelcomeViewController.xib */; };
 		54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */; };
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		545933B91EA75EBC0065B2B3 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		545933BA1EA75EBC0065B2B3 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		545933BD1EA764C90065B2B3 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		5499CA8C1EA84518003A9D24 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5499CA8D1EA84518003A9D24 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		54C34B281E7AC4480085DF09 /* WDKWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDKWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C34B301E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		5406CF311E7AD47D00788B62 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5499CA8B1EA84505003A9D24 /* Welcome */,
 				544B7BA21E9726C7000BE472 /* UIPopover */,
 				54178E341E7B8D13003C964E /* Home.storyboard */,
 				54178E291E7B72D3003C964E /* HomeViewController.swift */,
@@ -217,6 +222,15 @@
 				545933BA1EA75EBC0065B2B3 /* OAuthViewController.xib */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		5499CA8B1EA84505003A9D24 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				5499CA8C1EA84518003A9D24 /* WelcomeViewController.swift */,
+				5499CA8D1EA84518003A9D24 /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		54C34B1F1E7AC4480085DF09 = {
@@ -325,6 +339,7 @@
 				54C34B361E7AC4480085DF09 /* LaunchScreen.storyboard in Resources */,
 				54178E701E7BD8F6003C964E /* VisitorView.xib in Resources */,
 				54178E351E7B8D13003C964E /* Home.storyboard in Resources */,
+				5499CA8F1EA84518003A9D24 /* WelcomeViewController.xib in Resources */,
 				54178E3E1E7B92BB003C964E /* Profile.storyboard in Resources */,
 				545933BC1EA75EBC0065B2B3 /* OAuthViewController.xib in Resources */,
 				54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */,
@@ -410,6 +425,7 @@
 				54178E6E1E7BD8B5003C964E /* VisitorView.swift in Sources */,
 				54178E2E1E7B72F3003C964E /* MessageViewController.swift in Sources */,
 				54178E471E7BB63C003C964E /* UIButton+Extension.swift in Sources */,
+				5499CA8E1EA84518003A9D24 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

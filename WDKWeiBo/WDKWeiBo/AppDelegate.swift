@@ -12,7 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var loginVC: UIViewController? {
+        
+        let isLogin = UserAccountViewModel.shareInstance.isLogin
+        return isLogin ? WelcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch
@@ -21,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.orange
         // 全局设置导航栏按钮颜色
         UINavigationBar.appearance().tintColor = UIColor.orange
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = loginVC
+        
+        window?.makeKeyAndVisible()
         
         return true
     }

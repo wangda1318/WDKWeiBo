@@ -142,11 +142,14 @@ private extension OAuthViewController {
             
             print(account.description)
             
-            var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-            filePath = (filePath as NSString).appendingPathComponent("account")
-            print(filePath)
+            NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountViewModel.shareInstance.path)
             
-            NSKeyedArchiver.archiveRootObject(account, toFile: filePath)
+            // UserAccountViewModel中account属性为空需要赋值
+            UserAccountViewModel.shareInstance.userAccount = account
+            
+            self.dismiss(animated: false, completion: {
+                UIApplication.shared.keyWindow?.rootViewController = WelcomeViewController() 
+            })
         }
     }
 }
