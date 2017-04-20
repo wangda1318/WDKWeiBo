@@ -21,9 +21,14 @@ class HomeViewController: BaseTableViewController {
         if !isLogin {
             return
         }
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
+        
         setupNavigationBar()
         
         loadUserStatuses()
+        
         
     }
 
