@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
         avatorImage.sd_setImage(with: url, placeholderImage: UIImage(named: "avatar_default_big"))
         
         avatorBottomConstraint.constant = UIScreen.main.bounds.size.height - 200
-        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: [], animations: { 
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             
             self.view.layoutIfNeeded()
         }) { (_) in

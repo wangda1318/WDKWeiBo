@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="WDKWeiBo" customModuleProvider="target">
             <connections>
-                <outlet property="avatorBottomConstraint" destination="PaC-93-n5V" id="P3y-pR-6gc"/>
+                <outlet property="avatorBottomConstraint" destination="GG1-DN-TS8" id="IJ0-fl-d2G"/>
                 <outlet property="avatorImage" destination="wGN-1R-Niz" id="UNP-A3-FEM"/>
                 <outlet property="titleLabel" destination="c3s-hh-3ux" id="RnW-U2-09u"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,7 +47,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="dWI-AE-dCH" secondAttribute="bottom" id="5oj-dh-CgA"/>
-                <constraint firstAttribute="bottom" secondItem="wGN-1R-Niz" secondAttribute="bottom" constant="200" id="PaC-93-n5V"/>
+                <constraint firstAttribute="bottom" secondItem="wGN-1R-Niz" secondAttribute="bottom" constant="200" id="GG1-DN-TS8"/>
                 <constraint firstAttribute="trailing" secondItem="dWI-AE-dCH" secondAttribute="trailing" id="SlE-wv-ZcD"/>
                 <constraint firstItem="wGN-1R-Niz" firstAttribute="centerX" secondItem="dWI-AE-dCH" secondAttribute="centerX" id="Tlr-to-fR5"/>
                 <constraint firstItem="c3s-hh-3ux" firstAttribute="top" secondItem="wGN-1R-Niz" secondAttribute="bottom" constant="10" id="VHf-Rn-DCQ"/>

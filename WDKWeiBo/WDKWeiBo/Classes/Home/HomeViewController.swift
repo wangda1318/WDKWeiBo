@@ -22,6 +22,8 @@ class HomeViewController: BaseTableViewController {
         }
         setupNavigationBar()
         
+        loadUserStatuses()
+        
     }
 
 }
@@ -62,5 +64,28 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
         
         return CustomPresentationController(presentedViewController: presented, presenting: presenting)
         
+    }
+}
+
+private extension HomeViewController {
+    func loadUserStatuses() {
+        
+        NetworkTools.sharedInstance.userStatues { (result, error) in
+                        
+            if error != nil {
+                
+                return
+            }
+            
+            guard let resultDict = result else {
+                return
+            }
+            for dict in resultDict {
+                
+                print("dict = \(dict.description)")
+                
+            }
+
+        }
     }
 }

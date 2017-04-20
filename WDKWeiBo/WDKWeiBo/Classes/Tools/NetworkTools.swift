@@ -73,6 +73,8 @@ extension NetworkTools {
     }
 }
 
+
+// MARK: - 请求用户信息
 extension NetworkTools {
     
     func userInfo(accessToken: String, uid: String, finished: @escaping (_ result: [String: Any]?, _ error: Error?) -> ()) {
@@ -81,6 +83,32 @@ extension NetworkTools {
         
         request(method: .GET, URLString: "https://api.weibo.com/2/users/show.json", parameters: para) { (data, error) in
             finished(data as? [String : Any], error)
+            
+        }
+    }
+}
+
+
+// MARK: - 获取用户微博数据
+extension NetworkTools {
+    
+    func userStatues(finished: @escaping (_ result: [[String: Any]]?, _ error: Error?) -> ()) {
+        
+        let para = ["access_token": UserAccountViewModel.shareInstance.userAccount?.access_token!]
+        
+        request(method: .GET, URLString: "https://api.weibo.com/2/statuses/home_timeline.json", parameters: para) { (result, error) in
+            
+            // 获取statuses对应的数据
+            
+            guard let statusesDiict = result as? [String: Any] else {
+                return
+            }
+            
+            guard let statusesArray = statusesDiict["statuses"] else {
+                return
+            }
+                        
+            finished(statusesArray as? [[String : Any]] , error)
             
         }
     }
