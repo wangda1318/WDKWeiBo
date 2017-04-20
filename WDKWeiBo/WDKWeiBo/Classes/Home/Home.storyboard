@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,18 +13,91 @@
         <scene sceneID="KjL-jn-QYw">
             <objects>
                 <tableViewController id="sN8-xi-Pvh" customClass="HomeViewController" customModule="WDKWeiBo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RcN-Ey-Ubx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" id="RcN-Ey-Ubx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" id="1Zp-cC-dbw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" rowHeight="120" id="1Zp-cC-dbw" customClass="HomeTableViewCell" customModule="WDKWeiBo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Zp-cC-dbw" id="soE-ow-4HJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_small" translatesAutoresizingMaskIntoConstraints="NO" id="5iY-G2-cUd" userLabel="微博头像">
+                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Oov-Gc-Yxe"/>
+                                                <constraint firstAttribute="width" constant="40" id="RTX-Do-nRN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_enterprise_vip" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-AB-rMZ" userLabel="微博认证">
+                                            <rect key="frame" x="31" y="31" width="17" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="17" id="25S-bh-N8M"/>
+                                                <constraint firstAttribute="height" constant="17" id="nFd-dk-sKa"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家有小开" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBq-Zi-yVe" userLabel="微博昵称">
+                                            <rect key="frame" x="63" y="8" width="57.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10分钟前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiz-eU-DsB" userLabel="微博时间">
+                                            <rect key="frame" x="63" y="34.5" width="46" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10分钟前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uD-fw-3Dh" userLabel="微博来源">
+                                            <rect key="frame" x="124" y="35" width="46" height="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气真好啊啊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-CI-RFk" userLabel="微博内容">
+                                            <rect key="frame" x="8" y="63" width="359" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_membership_level1" translatesAutoresizingMaskIntoConstraints="NO" id="F7T-fx-Ihp" userLabel="微博会员">
+                                            <rect key="frame" x="125.5" y="10" width="14" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="14" id="FdU-I8-0gz"/>
+                                                <constraint firstAttribute="height" constant="14" id="hLb-ru-HFV"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Lgo-AB-rMZ" firstAttribute="bottom" secondItem="5iY-G2-cUd" secondAttribute="bottom" id="6od-JG-1GK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TS4-CI-RFk" secondAttribute="trailing" id="AJN-c3-csK"/>
+                                        <constraint firstItem="TS4-CI-RFk" firstAttribute="leading" secondItem="soE-ow-4HJ" secondAttribute="leadingMargin" id="D1k-Qs-XaD"/>
+                                        <constraint firstItem="F7T-fx-Ihp" firstAttribute="centerY" secondItem="IBq-Zi-yVe" secondAttribute="centerY" id="JeO-GS-KB0"/>
+                                        <constraint firstItem="TS4-CI-RFk" firstAttribute="top" secondItem="Lgo-AB-rMZ" secondAttribute="bottom" constant="15" id="Y8E-z6-5aQ"/>
+                                        <constraint firstItem="1uD-fw-3Dh" firstAttribute="centerY" secondItem="Tiz-eU-DsB" secondAttribute="centerY" id="bhV-bN-WEj"/>
+                                        <constraint firstItem="Lgo-AB-rMZ" firstAttribute="trailing" secondItem="5iY-G2-cUd" secondAttribute="trailing" id="iP9-eY-JrF"/>
+                                        <constraint firstItem="IBq-Zi-yVe" firstAttribute="top" secondItem="5iY-G2-cUd" secondAttribute="top" id="lFC-QU-0Jq"/>
+                                        <constraint firstItem="Tiz-eU-DsB" firstAttribute="bottom" secondItem="5iY-G2-cUd" secondAttribute="bottom" id="lNs-6N-WXX"/>
+                                        <constraint firstItem="1uD-fw-3Dh" firstAttribute="leading" secondItem="Tiz-eU-DsB" secondAttribute="trailing" constant="15" id="mpT-mC-7nm"/>
+                                        <constraint firstItem="IBq-Zi-yVe" firstAttribute="leading" secondItem="5iY-G2-cUd" secondAttribute="trailing" constant="15" id="oZg-wu-Q9m"/>
+                                        <constraint firstItem="5iY-G2-cUd" firstAttribute="leading" secondItem="soE-ow-4HJ" secondAttribute="leadingMargin" id="sVG-O6-4Kl"/>
+                                        <constraint firstItem="F7T-fx-Ihp" firstAttribute="leading" secondItem="IBq-Zi-yVe" secondAttribute="trailing" constant="5" id="sdu-GS-VEz"/>
+                                        <constraint firstItem="Tiz-eU-DsB" firstAttribute="leading" secondItem="IBq-Zi-yVe" secondAttribute="leading" id="tL4-Kv-Lb8"/>
+                                        <constraint firstItem="5iY-G2-cUd" firstAttribute="top" secondItem="soE-ow-4HJ" secondAttribute="topMargin" id="wdb-4x-e11"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentLabel" destination="TS4-CI-RFk" id="7uX-15-73W"/>
+                                    <outlet property="nickNameLabel" destination="IBq-Zi-yVe" id="cKt-Nl-5Rj"/>
+                                    <outlet property="profileImage" destination="5iY-G2-cUd" id="9Rk-ws-awZ"/>
+                                    <outlet property="sourceLabel" destination="1uD-fw-3Dh" id="sn7-eq-oiF"/>
+                                    <outlet property="timeLabel" destination="Tiz-eU-DsB" id="2xC-8Y-Grf"/>
+                                    <outlet property="vertifiedImage" destination="Lgo-AB-rMZ" id="3yi-f9-kJB"/>
+                                    <outlet property="vipImage" destination="F7T-fx-Ihp" id="EiF-bY-qcy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,7 +109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRY-00-Cki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-824"/>
+            <point key="canvasLocation" x="756" y="-824.43778110944538"/>
         </scene>
         <!--首页-->
         <scene sceneID="LJ5-MJ-DXs">
@@ -57,6 +131,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar_default_small" width="34" height="34"/>
+        <image name="avatar_enterprise_vip" width="17" height="17"/>
+        <image name="common_icon_membership_level1" width="14" height="14"/>
         <image name="tabbar_home" width="30" height="30"/>
         <image name="tabbar_home_highlighted" width="30" height="30"/>
     </resources>

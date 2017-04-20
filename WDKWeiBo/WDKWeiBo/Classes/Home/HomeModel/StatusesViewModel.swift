@@ -15,7 +15,8 @@ class StatusesViewModel: NSObject {
     var sourceText: String? //处理微博来源
     var verfiedImage: UIImage?
     var vipImage: UIImage?
-
+    var profileURL: URL?
+    
     init(statusesModel: StatusesModel) {
         super.init()
         
@@ -61,5 +62,8 @@ class StatusesViewModel: NSObject {
             
         }
 
+        // URL
+        let urlString = statusesModel.user?.profile_image_url ?? ""
+        profileURL = URL(string: urlString)
     }
 }

@@ -42,6 +42,7 @@
 		54FC9E041EA8658F008793AA /* StatusesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E031EA8658F008793AA /* StatusesModel.swift */; };
 		54FC9E061EA87267008793AA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E051EA87267008793AA /* UserModel.swift */; };
 		54FC9E081EA8A2FE008793AA /* StatusesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E071EA8A2FE008793AA /* StatusesViewModel.swift */; };
+		54FC9E0A1EA8AE0A008793AA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E091EA8AE0A008793AA /* HomeTableViewCell.swift */; };
 		E79206376F3BF79A40A9453F /* Pods_WDKWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		54FC9E031EA8658F008793AA /* StatusesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesModel.swift; sourceTree = "<group>"; };
 		54FC9E051EA87267008793AA /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		54FC9E071EA8A2FE008793AA /* StatusesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesViewModel.swift; sourceTree = "<group>"; };
+		54FC9E091EA8AE0A008793AA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		723D33C8EA27863DD1A36131 /* Pods-WDKWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDKWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B791D06112BD956405DE6A1B /* Pods-WDKWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				544B7BA21E9726C7000BE472 /* UIPopover */,
 				54178E341E7B8D13003C964E /* Home.storyboard */,
 				54178E291E7B72D3003C964E /* HomeViewController.swift */,
+				54FC9E091EA8AE0A008793AA /* HomeTableViewCell.swift */,
 				5425C2241E7FA8B200759428 /* CustomTitleButton.swift */,
 			);
 			path = Home;
@@ -441,6 +444,7 @@
 				54178E2C1E7B72E7003C964E /* DiscoverViewController.swift in Sources */,
 				54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */,
 				54178E2A1E7B72D3003C964E /* HomeViewController.swift in Sources */,
+				54FC9E0A1EA8AE0A008793AA /* HomeTableViewCell.swift in Sources */,
 				54178E6E1E7BD8B5003C964E /* VisitorView.swift in Sources */,
 				54FC9E081EA8A2FE008793AA /* StatusesViewModel.swift in Sources */,
 				54178E2E1E7B72F3003C964E /* MessageViewController.swift in Sources */,
