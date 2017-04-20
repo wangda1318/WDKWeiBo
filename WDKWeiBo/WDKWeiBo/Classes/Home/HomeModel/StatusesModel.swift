@@ -11,9 +11,24 @@ import UIKit
 class StatusesModel: NSObject {
 
     var created_at: String?
-    var source: String?
+    var source: String? {
+        didSet {
+            
+            if source == nil && source == "" {
+                return
+            }
+            // <a href=\"http://app.weibo.com/t/feed/4fuyNj\" rel=\"nofollow\">即刻笔记</a>
+            let startIndex = (source! as NSString).range(of: ">").location + 1
+            let lengthIndex = (source! as NSString).range(of: "</").location - startIndex
+            
+            sourceText = (source! as NSString).substring(with: NSMakeRange(startIndex, lengthIndex))
+            
+        }
+    }
     var text: String?
     var mid: String?
+    
+    var sourceText: String? //处理微博来源
     
     init(dict: [String: Any]) {
         super.init()

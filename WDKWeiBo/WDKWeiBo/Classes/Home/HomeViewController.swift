@@ -106,6 +106,7 @@ extension HomeViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell")!
         
         let statuses = statusesArray[indexPath.row]
+        print(statuses.sourceText)
         cell.textLabel?.text = statuses.text
         
         return cell
