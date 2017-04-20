@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: BaseTableViewController {
 
     lazy var titleButton: CustomTitleButton = CustomTitleButton(title: "林梦兮")
+    lazy var statusesArray: [StatusesModel] = [StatusesModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,10 +83,31 @@ private extension HomeViewController {
             }
             for dict in resultDict {
                 
-                print("dict = \(dict.description)")
-                
+                let model = StatusesModel(dict: dict)
+                self.statusesArray.append(model)
+                print(model.description)
             }
 
+            self.tableView.reloadData()
+            
         }
+    }
+}
+
+extension HomeViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return statusesArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell")!
+        
+        let statuses = statusesArray[indexPath.row]
+        cell.textLabel?.text = statuses.text
+        
+        return cell
     }
 }

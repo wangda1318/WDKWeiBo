@@ -39,6 +39,7 @@
 		54C34B361E7AC4480085DF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B341E7AC4480085DF09 /* LaunchScreen.storyboard */; };
 		54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */; };
 		54FA83051EA78CE800E09791 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA83041EA78CE800E09791 /* UserAccount.swift */; };
+		54FC9E041EA8658F008793AA /* StatusesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E031EA8658F008793AA /* StatusesModel.swift */; };
 		E79206376F3BF79A40A9453F /* Pods_WDKWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		54C34B371E7AC4480085DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		54FA83041EA78CE800E09791 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		54FC9E031EA8658F008793AA /* StatusesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesModel.swift; sourceTree = "<group>"; };
 		723D33C8EA27863DD1A36131 /* Pods-WDKWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDKWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B791D06112BD956405DE6A1B /* Pods-WDKWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		5406CF311E7AD47D00788B62 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				54FC9E021EA8654B008793AA /* HomeModel */,
 				5499CA8B1EA84505003A9D24 /* Welcome */,
 				544B7BA21E9726C7000BE472 /* UIPopover */,
 				54178E341E7B8D13003C964E /* Home.storyboard */,
@@ -263,6 +266,14 @@
 				54C34B371E7AC4480085DF09 /* Info.plist */,
 			);
 			path = WDKWeiBo;
+			sourceTree = "<group>";
+		};
+		54FC9E021EA8654B008793AA /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				54FC9E031EA8658F008793AA /* StatusesModel.swift */,
+			);
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		B9DA7CB4FE9939960D8269B0 /* Frameworks */ = {
@@ -410,6 +421,7 @@
 				54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */,
 				545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */,
 				545933BE1EA764C90065B2B3 /* AppConfig.swift in Sources */,
+				54FC9E041EA8658F008793AA /* StatusesModel.swift in Sources */,
 				54178E301E7B7300003C964E /* ProfileViewController.swift in Sources */,
 				54178E281E7B72AB003C964E /* MainTabBarController.swift in Sources */,
 				5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */,
