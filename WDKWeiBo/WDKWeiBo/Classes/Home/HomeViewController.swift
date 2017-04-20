@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: BaseTableViewController {
 
     lazy var titleButton: CustomTitleButton = CustomTitleButton(title: "林梦兮")
-    lazy var statusesArray: [StatusesModel] = [StatusesModel]()
+    lazy var statusesArray: [StatusesViewModel] = [StatusesViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,9 @@ private extension HomeViewController {
             for dict in resultDict {
                 
                 let model = StatusesModel(dict: dict)
-                self.statusesArray.append(model)
+                let viewModel = StatusesViewModel(statusesModel: model)
+                
+                self.statusesArray.append(viewModel)
                 print(model.description)
             }
 
@@ -105,9 +107,8 @@ extension HomeViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell")!
         
-        let statuses = statusesArray[indexPath.row]
-        print(statuses.sourceText)
-        cell.textLabel?.text = statuses.text
+        let model = statusesArray[indexPath.row]
+        cell.textLabel?.text = model.statusesModel?.text
         
         return cell
     }

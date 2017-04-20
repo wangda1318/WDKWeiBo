@@ -1,5 +1,5 @@
 //
-//  StatusesModel.swift
+//  UserModel.swift
 //  WDKWeiBo
 //
 //  Created by 王东开 on 2017/4/20.
@@ -8,27 +8,24 @@
 
 import UIKit
 
-class StatusesModel: NSObject {
+class UserModel: NSObject {
 
-    var created_at: String?
-    var source: String?
-    var text: String?
-    var mid: String?
-    
-    var user: UserModel?
+    var screen_name: String?
+    var profile_image_url: String?
+    var verified_type: Int = -1
+    var mbrank: Int = 0
     
     init(dict: [String: Any]) {
         super.init()
         
         setValuesForKeys(dict)
         
-        user = UserModel(dict: dict["user"] as! [String : Any])
-        
+        mbrank = (dict["mbrank"] as? Int)!
+        verified_type = (dict["verified_type"] as? Int)!
+
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
-    
-    
 }
