@@ -14,6 +14,7 @@ class StatusesModel: NSObject {
     var source: String?
     var text: String?
     var mid: String?
+    var pic_urls: [[String: String]]?
     
     var user: UserModel?
     

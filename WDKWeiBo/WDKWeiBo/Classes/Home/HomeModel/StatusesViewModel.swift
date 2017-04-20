@@ -16,6 +16,8 @@ class StatusesViewModel: NSObject {
     var verfiedImage: UIImage?
     var vipImage: UIImage?
     var profileURL: URL?
+    var picURLs: [URL] = [URL]()
+    
     
     init(statusesModel: StatusesModel) {
         super.init()
@@ -65,5 +67,19 @@ class StatusesViewModel: NSObject {
         // URL
         let urlString = statusesModel.user?.profile_image_url ?? ""
         profileURL = URL(string: urlString)
+        
+        // picURL
+        guard let picArray = statusesModel.pic_urls else {
+            return
+        }
+        
+        for picDict in picArray {
+            
+            guard let url = picDict["thumbnail_pic"] else {
+                continue
+            }
+            
+            picURLs.append(URL(string: url)!)
+        }
     }
 }
