@@ -92,9 +92,9 @@ extension NetworkTools {
 // MARK: - 获取用户微博数据
 extension NetworkTools {
     
-    func userStatues(finished: @escaping (_ result: [[String: Any]]?, _ error: Error?) -> ()) {
+    func userStatues(sinceID: String, maxID: String ,finished: @escaping (_ result: [[String: Any]]?, _ error: Error?) -> ()) {
         
-        let para = ["access_token": UserAccountViewModel.shareInstance.userAccount?.access_token!]
+        let para = ["access_token": UserAccountViewModel.shareInstance.userAccount?.access_token!, "since_id": sinceID, "max_id": maxID]
         
         request(method: .GET, URLString: "https://api.weibo.com/2/statuses/home_timeline.json", parameters: para) { (result, error) in
             

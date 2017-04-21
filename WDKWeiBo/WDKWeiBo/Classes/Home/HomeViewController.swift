@@ -30,7 +30,7 @@ class HomeViewController: BaseTableViewController {
         setupNavigationBar()
         
         setupHeader()
-        
+        setupFooter()
     }
 
 }
@@ -89,23 +89,45 @@ private extension HomeViewController {
         header?.beginRefreshing()
         
     }
+    
+    func setupFooter() {
+        
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadNewMoreStatuses))
+        
+    }
 
 }
 private extension HomeViewController {
     
     @objc func loadNewUserStatuses() {
         
-        loadUserStatuses()
-        
-        tableView.mj_header.endRefreshing()
+        loadUserStatuses(isNewData: true)
         
     }
     
-    /// 加载数据
-    func loadUserStatuses() {
+    @objc func loadNewMoreStatuses() {
         
-        NetworkTools.sharedInstance.userStatues { (result, error) in
-                        
+        loadUserStatuses(isNewData: false)
+        
+    }
+
+    /// 加载数据
+    func loadUserStatuses(isNewData: Bool) {
+        
+        var sinceID = "0"
+        var maxID = "0"
+        
+        if isNewData {
+            
+            sinceID = statusesArray.first?.statusesModel?.mid ?? "0"
+        } else {
+            
+            maxID = statusesArray.last?.statusesModel?.mid ?? "0"
+        }
+        
+        
+        NetworkTools.sharedInstance.userStatues(sinceID: sinceID, maxID: maxID) { (result, error) in
+            
             if error != nil {
                 
                 return
@@ -114,14 +136,25 @@ private extension HomeViewController {
             guard let resultDict = result else {
                 return
             }
+            
+            var array: [StatusesViewModel] = [StatusesViewModel]()
+            
             for dict in resultDict {
                 
                 let model = StatusesModel(dict: dict)
                 let viewModel = StatusesViewModel(statusesModel: model)
                 
                 
-                self.statusesArray.append(viewModel)
-                print(model.description)
+                array.append(viewModel)
+            }
+            
+            if isNewData {
+                
+                self.statusesArray = array + self.statusesArray
+            } else {
+                
+                array.remove(at: 0)
+                self.statusesArray = self.statusesArray + array
             }
             
             cacheImages(models: self.statusesArray)
@@ -138,7 +171,6 @@ private extension HomeViewController {
                     SDWebImageManager.shared().loadImage(with: picURL, options: [], progress: nil, completed: { (_, _, _, _, _, _) in
                         
                         group.leave()
-                        print("下载了一张图片")
                     })
                 }
             }
@@ -146,7 +178,9 @@ private extension HomeViewController {
             
             group.notify(queue: DispatchQueue.main) {
                 self.tableView.reloadData()
-                print("刷新")
+                
+                self.tableView.mj_header.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
             }
             
         }
