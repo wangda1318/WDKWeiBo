@@ -44,6 +44,8 @@
 		54FC9E081EA8A2FE008793AA /* StatusesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E071EA8A2FE008793AA /* StatusesViewModel.swift */; };
 		54FC9E0A1EA8AE0A008793AA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E091EA8AE0A008793AA /* HomeTableViewCell.swift */; };
 		54FC9E0E1EA99D3F008793AA /* PicCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E0D1EA99D3F008793AA /* PicCollection.swift */; };
+		54FC9E341EAA4655008793AA /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E321EAA4655008793AA /* ComposeViewController.swift */; };
+		54FC9E351EAA4655008793AA /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FC9E331EAA4655008793AA /* ComposeViewController.xib */; };
 		E79206376F3BF79A40A9453F /* Pods_WDKWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		54FC9E071EA8A2FE008793AA /* StatusesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesViewModel.swift; sourceTree = "<group>"; };
 		54FC9E091EA8AE0A008793AA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		54FC9E0D1EA99D3F008793AA /* PicCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollection.swift; sourceTree = "<group>"; };
+		54FC9E321EAA4655008793AA /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		54FC9E331EAA4655008793AA /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
 		723D33C8EA27863DD1A36131 /* Pods-WDKWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDKWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B791D06112BD956405DE6A1B /* Pods-WDKWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				54178E271E7B72AB003C964E /* MainTabBarController.swift */,
 				54178E6D1E7BD8B5003C964E /* VisitorView.swift */,
 				54178E6F1E7BD8F6003C964E /* VisitorView.xib */,
+				54FC9E321EAA4655008793AA /* ComposeViewController.swift */,
+				54FC9E331EAA4655008793AA /* ComposeViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 				544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */,
 				54178E431E7B93BA003C964E /* Null.storyboard in Resources */,
 				54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */,
+				54FC9E351EAA4655008793AA /* ComposeViewController.xib in Resources */,
 				54178E371E7B8D3F003C964E /* Discover.storyboard in Resources */,
 				54178E391E7B8D57003C964E /* Message.storyboard in Resources */,
 			);
@@ -450,6 +457,7 @@
 				54FC9E0A1EA8AE0A008793AA /* HomeTableViewCell.swift in Sources */,
 				54178E6E1E7BD8B5003C964E /* VisitorView.swift in Sources */,
 				54FC9E081EA8A2FE008793AA /* StatusesViewModel.swift in Sources */,
+				54FC9E341EAA4655008793AA /* ComposeViewController.swift in Sources */,
 				54178E2E1E7B72F3003C964E /* MessageViewController.swift in Sources */,
 				54178E471E7BB63C003C964E /* UIButton+Extension.swift in Sources */,
 				54FC9E0E1EA99D3F008793AA /* PicCollection.swift in Sources */,

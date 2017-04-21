@@ -43,7 +43,10 @@ private extension MainTabBarController {
     
     @objc func composeButtonClick() {
         
-        print("点击composeButtonClick")
+        let composeVC = ComposeViewController()
         
+        let composeNavigationVC = UINavigationController(rootViewController: composeVC)
+        
+        present(composeNavigationVC, animated: true, completion: nil)
     }
 }
