@@ -97,7 +97,6 @@ private extension HomeViewController {
                 print(model.description)
             }
             
-//            self.tableView.reloadData()
             cacheImages(models: self.statusesArray)
         }
         

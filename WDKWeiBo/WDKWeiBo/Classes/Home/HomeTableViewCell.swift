@@ -19,6 +19,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var reweetLabel: UILabel!
     
     @IBOutlet weak var picCollection: PicCollection!
     
@@ -43,9 +44,24 @@ class HomeTableViewCell: UITableViewCell {
             timeLabel.text = model.statusesModel?.created_at
             sourceLabel.text = model.sourceText
             contentLabel.text = model.statusesModel?.text
-            
             picCollectionWCon.constant = setupCollectionViewCell(count: model.picURLs.count).width
             picCollectionHCon.constant = setupCollectionViewCell(count: model.picURLs.count).height
+            
+            if model.statusesModel?.retweeted_status != nil {
+                
+                if let reweetText = model.statusesModel?.retweeted_status?.text, let nameText = model.statusesModel?.user?.screen_name {
+                    
+                    reweetLabel.text = "@" + nameText + "：" + reweetText
+                    
+                } else {
+                    
+                    reweetLabel.text = model.statusesModel?.retweeted_status?.text
+                }
+
+            } else {
+                
+                reweetLabel.text = nil
+            }
             
             picCollection.picURLs = model.picURLs
 
