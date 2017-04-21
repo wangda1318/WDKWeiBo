@@ -58,7 +58,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气真好啊啊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-CI-RFk" userLabel="微博内容">
-                                            <rect key="frame" x="8" y="63" width="359" height="14"/>
+                                            <rect key="frame" x="8" y="63" width="359" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -141,9 +141,9 @@
                                                 <constraint firstItem="EYq-C5-GqR" firstAttribute="leading" secondItem="3dM-rw-iTq" secondAttribute="trailing" id="zyj-jG-djh"/>
                                             </constraints>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-Fz-AF9">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-Fz-AF9" customClass="PicCollection" customModule="WDKWeiBo" customModuleProvider="target">
                                             <rect key="frame" x="8" y="87" width="240" height="63"/>
-                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="63" id="bgW-yh-Ly7"/>
                                                 <constraint firstAttribute="width" constant="240" id="t7G-zq-Yy7"/>
@@ -155,14 +155,14 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="picCell" id="tsB-Gt-C5o">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="picCell" id="tsB-Gt-C5o" customClass="PicCollectionCell" customModule="WDKWeiBo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-zD-fzV">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-zD-fzV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
                                                         </subviews>
@@ -173,6 +173,9 @@
                                                         <constraint firstItem="fcg-zD-fzV" firstAttribute="leading" secondItem="tsB-Gt-C5o" secondAttribute="leading" id="cSp-uX-pO4"/>
                                                         <constraint firstItem="fcg-zD-fzV" firstAttribute="top" secondItem="tsB-Gt-C5o" secondAttribute="top" id="lYg-j5-Arj"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="picImageView" destination="fcg-zD-fzV" id="ceF-uG-oyR"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -184,7 +187,7 @@
                                         <constraint firstItem="TS4-CI-RFk" firstAttribute="leading" secondItem="soE-ow-4HJ" secondAttribute="leadingMargin" id="D1k-Qs-XaD"/>
                                         <constraint firstItem="F7T-fx-Ihp" firstAttribute="centerY" secondItem="IBq-Zi-yVe" secondAttribute="centerY" id="JeO-GS-KB0"/>
                                         <constraint firstAttribute="trailing" secondItem="w3n-Cv-Xxh" secondAttribute="trailing" id="Jkg-Db-UfR"/>
-                                        <constraint firstItem="iNm-Fz-AF9" firstAttribute="top" secondItem="TS4-CI-RFk" secondAttribute="bottom" constant="10" id="Ukj-RR-1Fv"/>
+                                        <constraint firstItem="iNm-Fz-AF9" firstAttribute="top" secondItem="TS4-CI-RFk" secondAttribute="bottom" priority="750" constant="10" id="Ukj-RR-1Fv"/>
                                         <constraint firstItem="iNm-Fz-AF9" firstAttribute="leading" secondItem="soE-ow-4HJ" secondAttribute="leadingMargin" id="VKU-8S-gxh"/>
                                         <constraint firstAttribute="bottom" secondItem="w3n-Cv-Xxh" secondAttribute="bottom" id="X2h-28-UQF"/>
                                         <constraint firstItem="1uD-fw-3Dh" firstAttribute="centerY" secondItem="Tiz-eU-DsB" secondAttribute="centerY" id="bhV-bN-WEj"/>
@@ -204,6 +207,7 @@
                                 <connections>
                                     <outlet property="contentLabel" destination="TS4-CI-RFk" id="7uX-15-73W"/>
                                     <outlet property="nickNameLabel" destination="IBq-Zi-yVe" id="cKt-Nl-5Rj"/>
+                                    <outlet property="picCollection" destination="iNm-Fz-AF9" id="FcC-az-da8"/>
                                     <outlet property="picCollectionHCon" destination="bgW-yh-Ly7" id="gJV-es-KmC"/>
                                     <outlet property="picCollectionWCon" destination="t7G-zq-Yy7" id="C4z-CS-tGZ"/>
                                     <outlet property="profileImage" destination="5iY-G2-cUd" id="9Rk-ws-awZ"/>

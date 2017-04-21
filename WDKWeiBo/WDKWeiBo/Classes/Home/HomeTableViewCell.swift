@@ -20,6 +20,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
+    @IBOutlet weak var picCollection: PicCollection!
+    
     let itemMargin: CGFloat = 15
     let edgeWidth: CGFloat = 10
 
@@ -45,6 +47,8 @@ class HomeTableViewCell: UITableViewCell {
             picCollectionWCon.constant = setupCollectionViewCell(count: model.picURLs.count).width
             picCollectionHCon.constant = setupCollectionViewCell(count: model.picURLs.count).height
             
+            picCollection.picURLs = model.picURLs
+
         }
     }
     
@@ -53,6 +57,10 @@ class HomeTableViewCell: UITableViewCell {
         
         profileImage.layer.cornerRadius = 20
         profileImage.layer.masksToBounds = false
+     
+        let layout = picCollection.collectionViewLayout as! UICollectionViewFlowLayout
+        let itemWH = (UIScreen.main.bounds.width - 2*edgeWidth - 2*itemMargin)/3
+        layout.itemSize = CGSize(width: itemWH, height: itemWH)
         
     }
 
