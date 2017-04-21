@@ -139,7 +139,6 @@ extension HomeViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
         
         cell.viewModel = statusesArray[indexPath.row]
-        
         return cell
     }
 }
