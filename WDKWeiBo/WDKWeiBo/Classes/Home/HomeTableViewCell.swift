@@ -78,7 +78,7 @@ private extension HomeTableViewCell {
         if count == 1 {
             
             let image = SDWebImageManager.shared().imageCache?.imageFromMemoryCache(forKey: viewModel?.picURLs.first?.absoluteString)
-            layout.itemSize = CGSize(width: image!.size.width*2, height: image!.size.height)
+            layout.itemSize = CGSize(width: image!.size.width, height: image!.size.height)
 
             return CGSize(width: image!.size.width, height: image!.size.height)
             
