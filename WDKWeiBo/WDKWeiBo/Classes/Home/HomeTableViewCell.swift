@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 
+
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileImage: UIImageView!
@@ -18,6 +19,12 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    
+    let itemMargin: CGFloat = 15
+    let edgeWidth: CGFloat = 10
+
+    @IBOutlet weak var picCollectionWCon: NSLayoutConstraint!
+    @IBOutlet weak var picCollectionHCon: NSLayoutConstraint!
     
     var viewModel: StatusesViewModel? {
         didSet {
@@ -35,6 +42,9 @@ class HomeTableViewCell: UITableViewCell {
             sourceLabel.text = model.sourceText
             contentLabel.text = model.statusesModel?.text
             
+            picCollectionWCon.constant = setupCollectionViewCell(count: model.picURLs.count).width
+            picCollectionHCon.constant = setupCollectionViewCell(count: model.picURLs.count).height
+            
         }
     }
     
@@ -47,4 +57,28 @@ class HomeTableViewCell: UITableViewCell {
     }
 
     
+}
+
+private extension HomeTableViewCell {
+    
+    func setupCollectionViewCell(count: Int) -> CGSize {
+        
+        if count == 0 {
+            
+            return CGSize(width: 0, height: 0)
+        }
+        
+        if count == 4 {
+            
+            let itemWidth = (UIScreen.main.bounds.size.width - 2 * itemMargin - edgeWidth) / 2.0
+            
+            return CGSize(width: itemWidth * 2 + edgeWidth, height: itemWidth * 2 + edgeWidth)
+        }
+        
+        let lineNumber = (count - 1) / 3 + 1
+        let itemWidth = (UIScreen.main.bounds.size.width - 2 * itemMargin - edgeWidth * 2) / 3.0
+
+        return CGSize(width: itemWidth * 3 + 2 * edgeWidth, height: itemWidth * CGFloat(lineNumber) + CGFloat(lineNumber - 1) * edgeWidth)
+        
+    }
 }
