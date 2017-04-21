@@ -69,17 +69,20 @@ class StatusesViewModel: NSObject {
         profileURL = URL(string: urlString)
         
         // picURL
-        guard let picArray = statusesModel.pic_urls else {
-            return
+        let picArray = statusesModel.pic_urls?.count != 0 ? statusesModel.pic_urls : statusesModel.retweeted_status?.pic_urls
+        
+        if picArray != nil {
+            
+            for picDict in picArray!{
+                
+                guard let url = picDict["thumbnail_pic"] else {
+                    continue
+                }
+                
+                picURLs.append(URL(string: url)!)
+            }
+
         }
         
-        for picDict in picArray {
-            
-            guard let url = picDict["thumbnail_pic"] else {
-                continue
-            }
-            
-            picURLs.append(URL(string: url)!)
-        }
     }
 }
