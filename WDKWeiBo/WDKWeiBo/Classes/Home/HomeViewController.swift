@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import MJRefresh
 
 class HomeViewController: BaseTableViewController {
 
@@ -28,8 +29,7 @@ class HomeViewController: BaseTableViewController {
         
         setupNavigationBar()
         
-        loadUserStatuses()
-        
+        setupHeader()
         
     }
 
@@ -74,7 +74,34 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
+
 private extension HomeViewController {
+    
+    func setupHeader() {
+        
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadNewUserStatuses))
+        header?.setTitle("下拉刷新", for: .idle)
+        header?.setTitle("释放以更新", for: .pulling)
+        header?.setTitle("加载中", for: .refreshing)
+        
+        tableView.mj_header = header
+        
+        header?.beginRefreshing()
+        
+    }
+
+}
+private extension HomeViewController {
+    
+    @objc func loadNewUserStatuses() {
+        
+        loadUserStatuses()
+        
+        tableView.mj_header.endRefreshing()
+        
+    }
+    
+    /// 加载数据
     func loadUserStatuses() {
         
         NetworkTools.sharedInstance.userStatues { (result, error) in
