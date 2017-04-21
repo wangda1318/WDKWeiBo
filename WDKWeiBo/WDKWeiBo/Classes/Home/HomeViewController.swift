@@ -14,6 +14,7 @@ class HomeViewController: BaseTableViewController {
 
     lazy var titleButton: CustomTitleButton = CustomTitleButton(title: "林梦兮")
     lazy var statusesArray: [StatusesViewModel] = [StatusesViewModel]()
+    lazy var tipLabel: UILabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,9 @@ class HomeViewController: BaseTableViewController {
         
         setupHeader()
         setupFooter()
+        
+        setupTipLabel()
+        
     }
 
 }
@@ -58,13 +62,30 @@ private extension HomeViewController {
         popoverVC.modalPresentationStyle = .custom
         popoverVC.transitioningDelegate = self
         
-        present(popoverVC, animated: true, completion: nil)
+//        present(popoverVC, animated: true, completion: nil)
         
         print("title")
         
     }
 }
 
+private extension HomeViewController {
+    
+    func setupTipLabel() {
+        
+        tipLabel.frame = CGRect(x: 0, y: 10, width: UIScreen.main.bounds.width, height: 32)
+        
+        navigationController?.navigationBar.insertSubview(tipLabel, at: 0)
+        
+        tipLabel.backgroundColor = UIColor.orange
+        tipLabel.textAlignment = .center
+        tipLabel.textColor = UIColor.white
+        tipLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        tipLabel.isHidden = true
+        
+        
+    }
+}
 extension HomeViewController: UIViewControllerTransitioningDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -144,7 +165,6 @@ private extension HomeViewController {
                 let model = StatusesModel(dict: dict)
                 let viewModel = StatusesViewModel(statusesModel: model)
                 
-                
                 array.append(viewModel)
             }
             
@@ -181,6 +201,23 @@ private extension HomeViewController {
                 
                 self.tableView.mj_header.endRefreshing()
                 self.tableView.mj_footer.endRefreshing()
+                
+                self.tipLabel.text = "更新了 \(models.count) 条微博"
+                self.tipLabel.isHidden = false
+                
+                UIView.animate(withDuration: 1.5, animations: {
+                    
+                    self.tipLabel.frame.origin.y = 44
+                }, completion: { (_) in
+                    
+                    UIView.animate(withDuration: 1.5, delay: 1.0, options: [], animations: { 
+                        
+                        self.tipLabel.frame.origin.y = 10
+                    }, completion: { (_) in
+                        
+                        self.tipLabel.isHidden = true
+                    })
+                })
             }
             
         }
