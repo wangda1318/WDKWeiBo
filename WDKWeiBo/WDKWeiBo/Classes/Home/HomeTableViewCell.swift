@@ -20,6 +20,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var reweetLabel: UILabel!
+    @IBOutlet weak var reweetBackground: UIView!
     
     @IBOutlet weak var picCollection: PicCollection!
     
@@ -49,6 +50,8 @@ class HomeTableViewCell: UITableViewCell {
             
             if model.statusesModel?.retweeted_status != nil {
                 
+                reweetBackground.isHidden = false
+                
                 if let reweetText = model.statusesModel?.retweeted_status?.text, let nameText = model.statusesModel?.user?.screen_name {
                     
                     reweetLabel.text = "@" + nameText + "：" + reweetText
@@ -61,6 +64,8 @@ class HomeTableViewCell: UITableViewCell {
             } else {
                 
                 reweetLabel.text = nil
+                reweetBackground.isHidden = true
+
             }
             
             picCollection.picURLs = model.picURLs
