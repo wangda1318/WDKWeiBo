@@ -78,10 +78,9 @@ private extension HomeTableViewCell {
         if count == 1 {
             
             let image = SDWebImageManager.shared().imageCache?.imageFromMemoryCache(forKey: viewModel?.picURLs.first?.absoluteString)
-            let itemWH = image!.size.width * 2
-            layout.itemSize = CGSize(width: itemWH, height: itemWH)
+            layout.itemSize = CGSize(width: image!.size.width*2, height: image!.size.height)
 
-            return CGSize(width: image!.size.width * 2, height: image!.size.height * 2)
+            return CGSize(width: image!.size.width, height: image!.size.height)
             
         }
         
@@ -89,14 +88,14 @@ private extension HomeTableViewCell {
         if count == 4 {
             
             let itemWidth = (UIScreen.main.bounds.size.width - 2 * itemMargin - edgeWidth) / 2.0
-            layout.itemSize = CGSize(width: CGFloat(itemWidth * 2) + edgeWidth, height: CGFloat(itemWidth * 2) + edgeWidth)
+            layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
 
             return CGSize(width: itemWidth * 2 + edgeWidth, height: itemWidth * 2 + edgeWidth)
         }
         
         let lineNumber = (count - 1) / 3 + 1
         let itemWidth = (UIScreen.main.bounds.size.width - 2 * itemMargin - edgeWidth * 2) / 3.0
-        layout.itemSize = CGSize(width: CGFloat(itemWidth * 3) + edgeWidth * 2, height: CGFloat(itemWidth * 2) + edgeWidth * CGFloat(lineNumber - 1))
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         
         return CGSize(width: itemWidth * 3 + 2 * edgeWidth, height: itemWidth * CGFloat(lineNumber) + CGFloat(lineNumber - 1) * edgeWidth)
         
