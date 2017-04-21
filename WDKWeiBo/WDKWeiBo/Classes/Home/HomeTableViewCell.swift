@@ -58,9 +58,6 @@ class HomeTableViewCell: UITableViewCell {
         profileImage.layer.cornerRadius = 20
         profileImage.layer.masksToBounds = false
      
-        let layout = picCollection.collectionViewLayout as! UICollectionViewFlowLayout
-        let itemWH = (UIScreen.main.bounds.width - 2*edgeWidth - 2*itemMargin)/3
-        layout.itemSize = CGSize(width: itemWH, height: itemWH)
         
     }
 
@@ -76,16 +73,31 @@ private extension HomeTableViewCell {
             return CGSize(width: 0, height: 0)
         }
         
+        let layout = picCollection.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        if count == 1 {
+            
+            let image = SDWebImageManager.shared().imageCache?.imageFromMemoryCache(forKey: viewModel?.picURLs.first?.absoluteString)
+            let itemWH = image!.size.width * 2
+            layout.itemSize = CGSize(width: itemWH, height: itemWH)
+
+            return CGSize(width: image!.size.width * 2, height: image!.size.height * 2)
+            
+        }
+        
+        
         if count == 4 {
             
             let itemWidth = (UIScreen.main.bounds.size.width - 2 * itemMargin - edgeWidth) / 2.0
-            
+            layout.itemSize = CGSize(width: CGFloat(itemWidth * 2) + edgeWidth, height: CGFloat(itemWidth * 2) + edgeWidth)
+
             return CGSize(width: itemWidth * 2 + edgeWidth, height: itemWidth * 2 + edgeWidth)
         }
         
         let lineNumber = (count - 1) / 3 + 1
         let itemWidth = (UIScreen.main.bounds.size.width - 2 * itemMargin - edgeWidth * 2) / 3.0
-
+        layout.itemSize = CGSize(width: CGFloat(itemWidth * 3) + edgeWidth * 2, height: CGFloat(itemWidth * 2) + edgeWidth * CGFloat(lineNumber - 1))
+        
         return CGSize(width: itemWidth * 3 + 2 * edgeWidth, height: itemWidth * CGFloat(lineNumber) + CGFloat(lineNumber - 1) * edgeWidth)
         
     }
