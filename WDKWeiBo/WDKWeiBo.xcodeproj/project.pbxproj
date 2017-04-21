@@ -46,6 +46,7 @@
 		54FC9E0E1EA99D3F008793AA /* PicCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E0D1EA99D3F008793AA /* PicCollection.swift */; };
 		54FC9E341EAA4655008793AA /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E321EAA4655008793AA /* ComposeViewController.swift */; };
 		54FC9E351EAA4655008793AA /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FC9E331EAA4655008793AA /* ComposeViewController.xib */; };
+		54FC9E371EAA4BF6008793AA /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E361EAA4BF6008793AA /* CustomTextView.swift */; };
 		E79206376F3BF79A40A9453F /* Pods_WDKWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		54FC9E0D1EA99D3F008793AA /* PicCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollection.swift; sourceTree = "<group>"; };
 		54FC9E321EAA4655008793AA /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		54FC9E331EAA4655008793AA /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		54FC9E361EAA4BF6008793AA /* CustomTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		723D33C8EA27863DD1A36131 /* Pods-WDKWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9062884FE08FCE78044A92F8 /* Pods_WDKWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDKWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B791D06112BD956405DE6A1B /* Pods-WDKWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDKWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDKWeiBo/Pods-WDKWeiBo.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				54178E6F1E7BD8F6003C964E /* VisitorView.xib */,
 				54FC9E321EAA4655008793AA /* ComposeViewController.swift */,
 				54FC9E331EAA4655008793AA /* ComposeViewController.xib */,
+				54FC9E361EAA4BF6008793AA /* CustomTextView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FC9E371EAA4BF6008793AA /* CustomTextView.swift in Sources */,
 				54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */,
 				54FC9E061EA87267008793AA /* UserModel.swift in Sources */,
 				545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */,
