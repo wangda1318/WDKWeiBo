@@ -10,6 +10,7 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    @IBOutlet weak var composeTextView: CustomTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,12 @@ class ComposeViewController: UIViewController {
     }
 
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        composeTextView.becomeFirstResponder()
+        
+    }
 }
 
 private extension ComposeViewController {
@@ -44,6 +51,22 @@ private extension ComposeViewController {
     
     @objc func send() {
         
+        
+    }
+}
+
+extension ComposeViewController : UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        
+        self.composeTextView.placeholderLabel.isHidden = textView.hasText
+        navigationItem.rightBarButtonItem?.isEnabled = textView.hasText
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        self.composeTextView.resignFirstResponder()
         
     }
 }
