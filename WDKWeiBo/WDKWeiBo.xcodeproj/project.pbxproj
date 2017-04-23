@@ -25,6 +25,8 @@
 		5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */; };
 		5425C2251E7FA8B200759428 /* CustomTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425C2241E7FA8B200759428 /* CustomTitleButton.swift */; };
 		54484D961EAC6AC400DCC10B /* PickPickerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54484D951EAC6AC400DCC10B /* PickPickerCollection.swift */; };
+		54484D991EAC71D900DCC10B /* PicPickerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54484D971EAC71D900DCC10B /* PicPickerCollectionCell.swift */; };
+		54484D9A1EAC71D900DCC10B /* PicPickerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54484D981EAC71D900DCC10B /* PicPickerCollectionCell.xib */; };
 		544B7BA51E9726D6000BE472 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544B7BA31E9726D6000BE472 /* PopoverViewController.swift */; };
 		544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544B7BA41E9726D6000BE472 /* PopoverViewController.xib */; };
 		545933B51EA6F2760065B2B3 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */; };
@@ -70,6 +72,8 @@
 		5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		5425C2241E7FA8B200759428 /* CustomTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTitleButton.swift; sourceTree = "<group>"; };
 		54484D951EAC6AC400DCC10B /* PickPickerCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPickerCollection.swift; sourceTree = "<group>"; };
+		54484D971EAC71D900DCC10B /* PicPickerCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerCollectionCell.swift; sourceTree = "<group>"; };
+		54484D981EAC71D900DCC10B /* PicPickerCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPickerCollectionCell.xib; sourceTree = "<group>"; };
 		544B7BA31E9726D6000BE472 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		544B7BA41E9726D6000BE472 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				54FC9E0D1EA99D3F008793AA /* PicCollection.swift */,
 				5425C2241E7FA8B200759428 /* CustomTitleButton.swift */,
 				54484D951EAC6AC400DCC10B /* PickPickerCollection.swift */,
+				54484D971EAC71D900DCC10B /* PicPickerCollectionCell.swift */,
+				54484D981EAC71D900DCC10B /* PicPickerCollectionCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				545933BC1EA75EBC0065B2B3 /* OAuthViewController.xib in Resources */,
 				54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */,
 				54178E331E7B7E88003C964E /* MainVCSettings.json in Resources */,
+				54484D9A1EAC71D900DCC10B /* PicPickerCollectionCell.xib in Resources */,
 				544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */,
 				54178E431E7B93BA003C964E /* Null.storyboard in Resources */,
 				54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */,
@@ -469,6 +476,7 @@
 				54178E2E1E7B72F3003C964E /* MessageViewController.swift in Sources */,
 				54178E471E7BB63C003C964E /* UIButton+Extension.swift in Sources */,
 				54FC9E0E1EA99D3F008793AA /* PicCollection.swift in Sources */,
+				54484D991EAC71D900DCC10B /* PicPickerCollectionCell.swift in Sources */,
 				5499CA8E1EA84518003A9D24 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

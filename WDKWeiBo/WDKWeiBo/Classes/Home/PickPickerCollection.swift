@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let identifier = "picPickerCollectionCell"
+
 class PickPickerCollection: UICollectionView {
 
     override func awakeFromNib() {
@@ -15,9 +17,8 @@ class PickPickerCollection: UICollectionView {
         
         dataSource = self
         
-        register(UICollectionViewCell.self, forCellWithReuseIdentifier: "picPickerCell")
-        
-        
+        register( UINib(nibName: "PicPickerCollectionCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+       
     }
     
     
@@ -27,14 +28,12 @@ extension PickPickerCollection: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 9
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "picPickerCell", for: indexPath)
-        
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! PicPickerCollectionCell
         
         return cell
     }

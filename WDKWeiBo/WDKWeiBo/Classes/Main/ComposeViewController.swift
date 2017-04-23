@@ -32,6 +32,8 @@ class ComposeViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ComposeViewController.keyboardDidHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ComposeViewController.imagePickerClick), name: NSNotification.Name(rawValue: kNoticifationImagePickerName), object: nil)
+        
         let layout = imagePickerCollection.collectionViewLayout as! UICollectionViewFlowLayout
         let itemWidth = (UIScreen.main.bounds.width - 4 * edgeWidth) / 3.0
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
@@ -67,7 +69,23 @@ class ComposeViewController: UIViewController {
     }
 }
 
-
+private extension ComposeViewController {
+    
+    @objc func imagePickerClick() {
+        
+        let imagePC = UIImagePickerController()
+        
+        if imagePC.sourceType == .photoLibrary {
+            
+            imagePC.sourceType = .photoLibrary
+            imagePC.delegate = self
+            
+            present(imagePC, animated: true, completion: nil)
+            
+        }
+        
+    }
+}
 private extension ComposeViewController {
     
     func setupNavigation() {
@@ -134,6 +152,17 @@ extension ComposeViewController : UITextViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         self.composeTextView.resignFirstResponder()
+        
+    }
+}
+
+extension ComposeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image = info["UIImagePickerControllerOriginalImage"] as! UIImage
+        
+        dismiss(animated: true, completion: nil)
         
     }
 }
