@@ -24,6 +24,7 @@
 		54178E701E7BD8F6003C964E /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54178E6F1E7BD8F6003C964E /* VisitorView.xib */; };
 		5425C2231E7F7FFC00759428 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */; };
 		5425C2251E7FA8B200759428 /* CustomTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425C2241E7FA8B200759428 /* CustomTitleButton.swift */; };
+		54484D961EAC6AC400DCC10B /* PickPickerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54484D951EAC6AC400DCC10B /* PickPickerCollection.swift */; };
 		544B7BA51E9726D6000BE472 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544B7BA31E9726D6000BE472 /* PopoverViewController.swift */; };
 		544B7BA61E9726D6000BE472 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544B7BA41E9726D6000BE472 /* PopoverViewController.xib */; };
 		545933B51EA6F2760065B2B3 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */; };
@@ -68,6 +69,7 @@
 		54178E6F1E7BD8F6003C964E /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		5425C2221E7F7FFC00759428 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		5425C2241E7FA8B200759428 /* CustomTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTitleButton.swift; sourceTree = "<group>"; };
+		54484D951EAC6AC400DCC10B /* PickPickerCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPickerCollection.swift; sourceTree = "<group>"; };
 		544B7BA31E9726D6000BE472 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		544B7BA41E9726D6000BE472 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		545933B41EA6F2760065B2B3 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				54FC9E091EA8AE0A008793AA /* HomeTableViewCell.swift */,
 				54FC9E0D1EA99D3F008793AA /* PicCollection.swift */,
 				5425C2241E7FA8B200759428 /* CustomTitleButton.swift */,
+				54484D951EAC6AC400DCC10B /* PickPickerCollection.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */,
 				54178E2A1E7B72D3003C964E /* HomeViewController.swift in Sources */,
 				54FC9E0A1EA8AE0A008793AA /* HomeTableViewCell.swift in Sources */,
+				54484D961EAC6AC400DCC10B /* PickPickerCollection.swift in Sources */,
 				54178E6E1E7BD8B5003C964E /* VisitorView.swift in Sources */,
 				54FC9E081EA8A2FE008793AA /* StatusesViewModel.swift in Sources */,
 				54FC9E341EAA4655008793AA /* ComposeViewController.swift in Sources */,

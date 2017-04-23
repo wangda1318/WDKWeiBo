@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController" customModule="WDKWeiBo" customModuleProvider="target">
             <connections>
+                <outlet property="ImagePickerHCon" destination="Mub-hh-Ykv" id="agw-fG-reu"/>
                 <outlet property="composeTextView" destination="LlO-or-Ih8" id="0NA-VC-X1d"/>
+                <outlet property="imagePickerCollection" destination="lZU-V2-rAk" id="M2h-cM-35X"/>
                 <outlet property="toolBar" destination="lNy-J8-2YQ" id="SoG-lq-PNg"/>
                 <outlet property="toolBarBCon" destination="6CB-6m-E6b" id="vI3-Jp-PVs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,6 +32,19 @@
                         <outlet property="delegate" destination="-1" id="DUV-gM-8i5"/>
                     </connections>
                 </textView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lZU-V2-rAk" customClass="PickPickerCollection" customModule="WDKWeiBo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="666" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Mub-hh-Ykv"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VXk-u6-ziv">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNy-J8-2YQ">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <constraints>
@@ -43,6 +58,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="compose_toolbar_picture"/>
                                 <state key="highlighted" image="compose_toolbar_picture_highlighted"/>
+                                <connections>
+                                    <action selector="imagePicker" destination="-1" eventType="touchUpInside" id="UBV-AB-hu2"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="RWY-6v-M9b"/>
@@ -89,10 +107,13 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="lNy-J8-2YQ" secondAttribute="bottom" id="6CB-6m-E6b"/>
                 <constraint firstAttribute="trailing" secondItem="LlO-or-Ih8" secondAttribute="trailing" id="Jfg-Of-1pZ"/>
+                <constraint firstAttribute="bottom" secondItem="lZU-V2-rAk" secondAttribute="bottom" id="YI3-Ss-OO1"/>
                 <constraint firstAttribute="bottom" secondItem="LlO-or-Ih8" secondAttribute="bottom" id="cCO-lD-LOu"/>
                 <constraint firstItem="LlO-or-Ih8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="evU-Gu-tJ9"/>
+                <constraint firstItem="lZU-V2-rAk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k9D-rn-voF"/>
                 <constraint firstItem="LlO-or-Ih8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mk5-hQ-nbw"/>
                 <constraint firstItem="lNy-J8-2YQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oCq-04-pzD"/>
+                <constraint firstAttribute="trailing" secondItem="lZU-V2-rAk" secondAttribute="trailing" id="uJb-jh-s61"/>
                 <constraint firstAttribute="trailing" secondItem="lNy-J8-2YQ" secondAttribute="trailing" id="vax-1U-Uv5"/>
             </constraints>
         </view>
