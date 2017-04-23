@@ -12,6 +12,12 @@ private let identifier = "picPickerCollectionCell"
 
 class PickPickerCollection: UICollectionView {
 
+    var imageArray: [UIImage] = [UIImage]() {
+        didSet {
+            reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,12 +34,14 @@ extension PickPickerCollection: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return imageArray.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! PicPickerCollectionCell
+        
+        cell.cellImage = indexPath.item < imageArray.count ? imageArray[indexPath.item] : nil
         
         return cell
     }

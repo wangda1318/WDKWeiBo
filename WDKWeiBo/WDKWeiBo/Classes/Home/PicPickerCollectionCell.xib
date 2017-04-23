@@ -44,6 +44,9 @@
                 <constraint firstAttribute="trailing" secondItem="EPu-It-YiC" secondAttribute="trailing" id="jmG-PY-DZp"/>
             </constraints>
             <size key="customSize" width="98" height="96"/>
+            <connections>
+                <outlet property="imageButton" destination="BfF-dY-Mdp" id="zi0-7P-DGZ"/>
+            </connections>
             <point key="canvasLocation" x="86" y="164"/>
         </collectionViewCell>
     </objects>

@@ -20,6 +20,7 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var toolBarBCon: NSLayoutConstraint!
     @IBOutlet weak var ImagePickerHCon: NSLayoutConstraint!
     
+    lazy var imagesArray: [UIImage] = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,6 +162,10 @@ extension ComposeViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info["UIImagePickerControllerOriginalImage"] as! UIImage
+        
+        imagesArray.append(image)
+        
+        imagePickerCollection.imageArray = imagesArray
         
         dismiss(animated: true, completion: nil)
         

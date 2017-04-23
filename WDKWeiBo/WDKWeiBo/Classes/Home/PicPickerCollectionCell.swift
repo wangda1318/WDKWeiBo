@@ -9,7 +9,23 @@
 import UIKit
 
 class PicPickerCollectionCell: UICollectionViewCell {
+    @IBOutlet weak var imageButton: UIButton!
 
+    var cellImage: UIImage? {
+        didSet {
+            if cellImage != nil {
+                
+                imageButton.setBackgroundImage(cellImage!, for: .normal)
+                imageButton.isUserInteractionEnabled = false
+                
+            } else {
+                
+                imageButton.setBackgroundImage(UIImage(named: "compose_pic_add"), for: .normal)
+                imageButton.isUserInteractionEnabled = true
+
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
