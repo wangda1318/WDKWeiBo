@@ -59,7 +59,7 @@ class ComposeViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-//    图片选择
+// MARK: -  图片选择
     @IBAction func imagePicker() {
         
         ImagePickerHCon.constant = UIScreen.main.bounds.height * 0.65
@@ -71,6 +71,26 @@ class ComposeViewController: UIViewController {
             
         }
     }
+    
+    
+// MARK: - 表情键盘
+    
+    @IBAction func emojyClick() {
+        
+        composeTextView.resignFirstResponder()
+        
+        // 切换键盘
+        if composeTextView.inputView == nil {
+            
+            composeTextView.inputView = UISwitch()
+        } else {
+            
+            composeTextView.inputView = nil
+        }
+        
+        composeTextView.becomeFirstResponder()
+    }
+    
 }
 
 
@@ -126,8 +146,6 @@ extension ComposeViewController {
     @objc func keyboardWillShow(noticifation: NSNotification) {
         
         
-        print(noticifation.userInfo!)
-
         let frame = (noticifation.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
         toolBarBCon.constant = frame.height
