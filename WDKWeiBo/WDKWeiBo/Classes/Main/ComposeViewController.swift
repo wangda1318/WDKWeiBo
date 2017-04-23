@@ -35,6 +35,9 @@ class ComposeViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ComposeViewController.imagePickerClick), name: NSNotification.Name(rawValue: kNoticifationImagePickerName), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ComposeViewController.imageHiddenClick(info:)), name: NSNotification.Name(rawValue: kNoticifationImageHiddenName), object: nil)
+
+        
         let layout = imagePickerCollection.collectionViewLayout as! UICollectionViewFlowLayout
         let itemWidth = (UIScreen.main.bounds.width - 4 * edgeWidth) / 3.0
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
@@ -70,6 +73,8 @@ class ComposeViewController: UIViewController {
     }
 }
 
+
+// MARK: - 图片选择与删除
 private extension ComposeViewController {
     
     @objc func imagePickerClick() {
@@ -84,6 +89,18 @@ private extension ComposeViewController {
             present(imagePC, animated: true, completion: nil)
             
         }
+        
+    }
+    
+    @objc func imageHiddenClick(info: Notification) {
+        
+        let image = info.object as! UIImage
+        
+        let index = imagesArray.index(of: image) ?? 0
+        
+        imagesArray.remove(at: index)
+        
+        imagePickerCollection.imageArray = imagesArray
         
     }
 }

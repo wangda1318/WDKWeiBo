@@ -13,3 +13,5 @@ let app_secret = "05479976c3d3e8b84c60352bdc65aab9"
 let redirect_uri = "https://www.baidu.com"
 
 let kNoticifationImagePickerName = "kNoticifationImagePickerName"
+
+let kNoticifationImageHiddenName = "kNoticifationImageHiddenName"

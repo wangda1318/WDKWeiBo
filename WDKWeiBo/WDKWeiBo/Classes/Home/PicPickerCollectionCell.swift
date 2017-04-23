@@ -10,18 +10,23 @@ import UIKit
 
 class PicPickerCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var hiddenButton: UIButton!
+    @IBOutlet weak var backImageView: UIImageView!
 
     var cellImage: UIImage? {
         didSet {
             if cellImage != nil {
                 
-                imageButton.setBackgroundImage(cellImage!, for: .normal)
+                backImageView.image = cellImage
                 imageButton.isUserInteractionEnabled = false
+                hiddenButton.isHidden = false
+                
                 
             } else {
                 
-                imageButton.setBackgroundImage(UIImage(named: "compose_pic_add"), for: .normal)
+                backImageView.image = nil
                 imageButton.isUserInteractionEnabled = true
+                hiddenButton.isHidden = true
 
             }
         }
@@ -37,4 +42,10 @@ class PicPickerCollectionCell: UICollectionViewCell {
         
         
     }
+    
+    @IBAction func imageHiddenClick() {
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kNoticifationImageHiddenName), object: backImageView.image)
+    }
+    
 }

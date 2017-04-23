@@ -25,6 +25,9 @@
                             <action selector="imagePickerClick" destination="gTV-IL-0wX" eventType="touchUpInside" id="A5w-HU-1Ph"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GED-P9-QWP">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="96"/>
+                    </imageView>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPu-It-YiC">
                         <rect key="frame" x="74" y="0.0" width="24" height="24"/>
                         <constraints>
@@ -32,6 +35,9 @@
                             <constraint firstAttribute="width" constant="24" id="Ftb-6P-ekZ"/>
                         </constraints>
                         <state key="normal" image="compose_photo_close"/>
+                        <connections>
+                            <action selector="imageHiddenClick" destination="gTV-IL-0wX" eventType="touchUpInside" id="5Ik-m1-WIO"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -39,12 +45,18 @@
                 <constraint firstItem="BfF-dY-Mdp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9Kp-0e-Eu1"/>
                 <constraint firstItem="BfF-dY-Mdp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="B4R-Fk-uN3"/>
                 <constraint firstItem="EPu-It-YiC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Kpa-v8-EyF"/>
+                <constraint firstItem="GED-P9-QWP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M5F-62-SAx"/>
+                <constraint firstAttribute="trailing" secondItem="GED-P9-QWP" secondAttribute="trailing" id="WjU-9S-02H"/>
                 <constraint firstAttribute="trailing" secondItem="BfF-dY-Mdp" secondAttribute="trailing" id="YW0-Mj-7hp"/>
                 <constraint firstAttribute="bottom" secondItem="BfF-dY-Mdp" secondAttribute="bottom" id="ZQt-gs-G3u"/>
                 <constraint firstAttribute="trailing" secondItem="EPu-It-YiC" secondAttribute="trailing" id="jmG-PY-DZp"/>
+                <constraint firstItem="GED-P9-QWP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="miX-XP-Scq"/>
+                <constraint firstAttribute="bottom" secondItem="GED-P9-QWP" secondAttribute="bottom" id="xFg-ij-dra"/>
             </constraints>
             <size key="customSize" width="98" height="96"/>
             <connections>
+                <outlet property="backImageView" destination="GED-P9-QWP" id="Ctk-bj-mxv"/>
+                <outlet property="hiddenButton" destination="EPu-It-YiC" id="2t5-kH-Fdf"/>
                 <outlet property="imageButton" destination="BfF-dY-Mdp" id="zi0-7P-DGZ"/>
             </connections>
             <point key="canvasLocation" x="86" y="164"/>
