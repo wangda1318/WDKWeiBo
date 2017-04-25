@@ -113,3 +113,24 @@ extension NetworkTools {
         }
     }
 }
+
+
+// MARK: - 发送微博
+extension NetworkTools {
+    
+    func postWB(text: String, success: @escaping(_ isPost: Bool) -> ()) {
+                
+        let para = ["access_token": UserAccountViewModel.shareInstance.userAccount?.access_token, "status": text]
+        
+        request(method: .POST, URLString: "https://api.weibo.com/2/statuses/update.json", parameters: para) { (result, error) in
+            
+            if result != nil {
+                
+                success(true)
+            } else {
+                
+                success(false)
+            }
+        }
+    }
+}

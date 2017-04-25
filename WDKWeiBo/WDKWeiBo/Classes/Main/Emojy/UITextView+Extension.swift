@@ -16,12 +16,16 @@ extension UITextView {
         
         attributedText.enumerateAttributes(in: NSMakeRange(0, attributedText.length), options: []) { (dict, range, _) in
             
-            if let attachment = dict["NSAttachment"] {
-                text.replaceCharacters(in: range, with: (attachment as! EmojiTextAttachment).chs!)
+            if let attachment = dict["NSAttachment"] as? EmojiTextAttachment{
                 
+                print("range.location = \(range.location), range.length = \(range.length)")
+                
+                
+                text.replaceCharacters(in: range, with: "[哈哈]")
             }
             
             
+            print(dict)
             
         }
         

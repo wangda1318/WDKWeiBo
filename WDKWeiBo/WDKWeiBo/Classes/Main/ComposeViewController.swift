@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 private let edgeWidth: CGFloat = 15
 
@@ -180,8 +181,18 @@ private extension ComposeViewController {
     
     @objc func send() {
         
-        print(composeTextView.getEmoticon())
+        NetworkTools.sharedInstance.postWB(text: composeTextView.getEmoticon()) { (success) in
+            
+            if success {
+                
+                SVProgressHUD.showSuccess(withStatus: "发送成功")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                
+                SVProgressHUD.showError(withStatus: "发送失败")
 
+            }
+        }
     }
 }
 
