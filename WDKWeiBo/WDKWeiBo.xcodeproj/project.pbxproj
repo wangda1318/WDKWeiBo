@@ -40,6 +40,14 @@
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
 		54C34B361E7AC4480085DF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B341E7AC4480085DF09 /* LaunchScreen.storyboard */; };
+		54C8338F1EAF6BAF00BC06E9 /* EmojiTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833811EAF6BAF00BC06E9 /* EmojiTextAttachment.swift */; };
+		54C833901EAF6BAF00BC06E9 /* Emojy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833821EAF6BAF00BC06E9 /* Emojy.swift */; };
+		54C833911EAF6BAF00BC06E9 /* EmojyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833831EAF6BAF00BC06E9 /* EmojyCollectionViewCell.swift */; };
+		54C833921EAF6BAF00BC06E9 /* EmojyPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833841EAF6BAF00BC06E9 /* EmojyPackage.swift */; };
+		54C833931EAF6BAF00BC06E9 /* EmojyPackageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833851EAF6BAF00BC06E9 /* EmojyPackageManager.swift */; };
+		54C833941EAF6BAF00BC06E9 /* EmojyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833861EAF6BAF00BC06E9 /* EmojyViewController.swift */; };
+		54C833951EAF6BAF00BC06E9 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54C833871EAF6BAF00BC06E9 /* Emoticons.bundle */; };
+		54C833971EAF6BAF00BC06E9 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C833891EAF6BAF00BC06E9 /* UITextView+Extension.swift */; };
 		54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */; };
 		54FA83051EA78CE800E09791 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA83041EA78CE800E09791 /* UserAccount.swift */; };
 		54FC9E041EA8658F008793AA /* StatusesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC9E031EA8658F008793AA /* StatusesModel.swift */; };
@@ -89,6 +97,14 @@
 		54C34B321E7AC4480085DF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54C34B351E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54C34B371E7AC4480085DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54C833811EAF6BAF00BC06E9 /* EmojiTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTextAttachment.swift; sourceTree = "<group>"; };
+		54C833821EAF6BAF00BC06E9 /* Emojy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojy.swift; sourceTree = "<group>"; };
+		54C833831EAF6BAF00BC06E9 /* EmojyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojyCollectionViewCell.swift; sourceTree = "<group>"; };
+		54C833841EAF6BAF00BC06E9 /* EmojyPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojyPackage.swift; sourceTree = "<group>"; };
+		54C833851EAF6BAF00BC06E9 /* EmojyPackageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojyPackageManager.swift; sourceTree = "<group>"; };
+		54C833861EAF6BAF00BC06E9 /* EmojyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojyViewController.swift; sourceTree = "<group>"; };
+		54C833871EAF6BAF00BC06E9 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		54C833891EAF6BAF00BC06E9 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		54CAB1C61EA7AD5200447C32 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		54FA83041EA78CE800E09791 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		54FC9E031EA8658F008793AA /* StatusesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesModel.swift; sourceTree = "<group>"; };
@@ -170,6 +186,7 @@
 		5406CF321E7AD47D00788B62 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				54C8337A1EAF6BAF00BC06E9 /* Emojy */,
 				545933B81EA75EAC0065B2B3 /* OAuth */,
 				54178E271E7B72AB003C964E /* MainTabBarController.swift */,
 				54178E6D1E7BD8B5003C964E /* VisitorView.swift */,
@@ -296,6 +313,21 @@
 			path = WDKWeiBo;
 			sourceTree = "<group>";
 		};
+		54C8337A1EAF6BAF00BC06E9 /* Emojy */ = {
+			isa = PBXGroup;
+			children = (
+				54C833811EAF6BAF00BC06E9 /* EmojiTextAttachment.swift */,
+				54C833821EAF6BAF00BC06E9 /* Emojy.swift */,
+				54C833831EAF6BAF00BC06E9 /* EmojyCollectionViewCell.swift */,
+				54C833841EAF6BAF00BC06E9 /* EmojyPackage.swift */,
+				54C833851EAF6BAF00BC06E9 /* EmojyPackageManager.swift */,
+				54C833861EAF6BAF00BC06E9 /* EmojyViewController.swift */,
+				54C833871EAF6BAF00BC06E9 /* Emoticons.bundle */,
+				54C833891EAF6BAF00BC06E9 /* UITextView+Extension.swift */,
+			);
+			path = Emojy;
+			sourceTree = "<group>";
+		};
 		54FC9E021EA8654B008793AA /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +423,7 @@
 				54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */,
 				54FC9E351EAA4655008793AA /* ComposeViewController.xib in Resources */,
 				54178E371E7B8D3F003C964E /* Discover.storyboard in Resources */,
+				54C833951EAF6BAF00BC06E9 /* Emoticons.bundle in Resources */,
 				54178E391E7B8D57003C964E /* Message.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +486,10 @@
 				54FC9E371EAA4BF6008793AA /* CustomTextView.swift in Sources */,
 				54CAB1C71EA7AD5200447C32 /* UserAccountViewModel.swift in Sources */,
 				54FC9E061EA87267008793AA /* UserModel.swift in Sources */,
+				54C833911EAF6BAF00BC06E9 /* EmojyCollectionViewCell.swift in Sources */,
 				545933B71EA6FAB20065B2B3 /* NetworkTools.swift in Sources */,
+				54C833921EAF6BAF00BC06E9 /* EmojyPackage.swift in Sources */,
+				54C833941EAF6BAF00BC06E9 /* EmojyViewController.swift in Sources */,
 				545933BE1EA764C90065B2B3 /* AppConfig.swift in Sources */,
 				54FC9E041EA8658F008793AA /* StatusesModel.swift in Sources */,
 				54178E301E7B7300003C964E /* ProfileViewController.swift in Sources */,
@@ -465,7 +501,11 @@
 				54FA83051EA78CE800E09791 /* UserAccount.swift in Sources */,
 				544B7BA51E9726D6000BE472 /* PopoverViewController.swift in Sources */,
 				54178E6C1E7BD6DD003C964E /* BaseTableViewController.swift in Sources */,
+				54C833901EAF6BAF00BC06E9 /* Emojy.swift in Sources */,
+				54C8338F1EAF6BAF00BC06E9 /* EmojiTextAttachment.swift in Sources */,
 				54178E2C1E7B72E7003C964E /* DiscoverViewController.swift in Sources */,
+				54C833931EAF6BAF00BC06E9 /* EmojyPackageManager.swift in Sources */,
+				54C833971EAF6BAF00BC06E9 /* UITextView+Extension.swift in Sources */,
 				54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */,
 				54178E2A1E7B72D3003C964E /* HomeViewController.swift in Sources */,
 				54FC9E0A1EA8AE0A008793AA /* HomeTableViewCell.swift in Sources */,

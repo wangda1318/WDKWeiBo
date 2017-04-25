@@ -21,7 +21,15 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var ImagePickerHCon: NSLayoutConstraint!
     
     lazy var imagesArray: [UIImage] = [UIImage]()
-    
+    lazy var vc: EmojyViewController = EmojyViewController { [weak self] (emojy) in
+        
+        print(emojy)
+        
+        self?.composeTextView.insertEmoticon(emojy: emojy)
+        self?.textViewDidChange(self!.composeTextView)
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,7 +90,7 @@ class ComposeViewController: UIViewController {
         // 切换键盘
         if composeTextView.inputView == nil {
             
-            composeTextView.inputView = UISwitch()
+            composeTextView.inputView = vc.view
         } else {
             
             composeTextView.inputView = nil
@@ -172,7 +180,8 @@ private extension ComposeViewController {
     
     @objc func send() {
         
-        
+        print(composeTextView.getEmoticon())
+
     }
 }
 
