@@ -43,8 +43,9 @@ class HomeTableViewCell: UITableViewCell {
             nickNameLabel.textColor = model.vipImage == nil ? UIColor.black : UIColor.orange
             vipImage.image = model.vipImage
             timeLabel.text = model.statusesModel?.created_at
-            sourceLabel.text = model.sourceText
-            contentLabel.text = model.statusesModel?.text
+            sourceLabel.text = viewModel?.sourceText
+            contentLabel.attributedText = EmojiFind.shared.findAttrEmoji(attr: model.statusesModel?.text, font: sourceLabel.font!)
+//            contentLabel.text = model.statusesModel?.text
             picCollectionWCon.constant = setupCollectionViewCell(count: model.picURLs.count).width
             picCollectionHCon.constant = setupCollectionViewCell(count: model.picURLs.count).height
             
@@ -54,7 +55,8 @@ class HomeTableViewCell: UITableViewCell {
                 
                 if let reweetText = model.statusesModel?.retweeted_status?.text, let nameText = model.statusesModel?.user?.screen_name {
                     
-                    reweetLabel.text = "@" + nameText + "：" + reweetText
+                    var text = "@" + nameText + "：" + reweetText
+                    reweetLabel.attributedText = EmojiFind.shared.findAttrEmoji(attr: text, font: reweetLabel.font!)
                     
                 } else {
                     

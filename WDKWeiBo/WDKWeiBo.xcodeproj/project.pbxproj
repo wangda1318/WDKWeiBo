@@ -36,6 +36,7 @@
 		545933BE1EA764C90065B2B3 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545933BD1EA764C90065B2B3 /* AppConfig.swift */; };
 		5499CA8E1EA84518003A9D24 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499CA8C1EA84518003A9D24 /* WelcomeViewController.swift */; };
 		5499CA8F1EA84518003A9D24 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5499CA8D1EA84518003A9D24 /* WelcomeViewController.xib */; };
+		54B6FDD81EB6BAA10015D999 /* EmojiFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6FDD71EB6BAA10015D999 /* EmojiFind.swift */; };
 		54C34B2C1E7AC4480085DF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */; };
 		54C34B311E7AC4480085DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B2F1E7AC4480085DF09 /* Main.storyboard */; };
 		54C34B331E7AC4480085DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C34B321E7AC4480085DF09 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		545933BD1EA764C90065B2B3 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		5499CA8C1EA84518003A9D24 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5499CA8D1EA84518003A9D24 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		54B6FDD71EB6BAA10015D999 /* EmojiFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFind.swift; sourceTree = "<group>"; };
 		54C34B281E7AC4480085DF09 /* WDKWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDKWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C34B2B1E7AC4480085DF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C34B301E7AC4480085DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				54C833861EAF6BAF00BC06E9 /* EmojyViewController.swift */,
 				54C833871EAF6BAF00BC06E9 /* Emoticons.bundle */,
 				54C833891EAF6BAF00BC06E9 /* UITextView+Extension.swift */,
+				54B6FDD71EB6BAA10015D999 /* EmojiFind.swift */,
 			);
 			path = Emojy;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				54FC9E081EA8A2FE008793AA /* StatusesViewModel.swift in Sources */,
 				54FC9E341EAA4655008793AA /* ComposeViewController.swift in Sources */,
 				54178E2E1E7B72F3003C964E /* MessageViewController.swift in Sources */,
+				54B6FDD81EB6BAA10015D999 /* EmojiFind.swift in Sources */,
 				54178E471E7BB63C003C964E /* UIButton+Extension.swift in Sources */,
 				54FC9E0E1EA99D3F008793AA /* PicCollection.swift in Sources */,
 				54484D991EAC71D900DCC10B /* PicPickerCollectionCell.swift in Sources */,
